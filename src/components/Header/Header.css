@@ -55,6 +55,13 @@
     color: rgb(250, 112, 133);
 }
 
+.main a{
+    font-family: sans-serif;
+    font-size: 1.3em;
+}
+
+
+
 .dropdown {
     position: relative;
     min-width: 180px;
@@ -62,10 +69,21 @@
     text-align: center;
 
 }
-.dropdown li{
+.dropdown {
+    li{
    padding: 5px;
 }
+    a{
+        text-decoration: none;
+        font-size: 1.2em;
+        font-family: sans-serif;
+    }
+}
 
+.dropdown__text{
+    font-family: sans-serif;
+    font-size: 1.2em;
+}
 
 .dropdown__face,
 .dropdown__items {

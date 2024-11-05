@@ -20,7 +20,7 @@ const Header = () => {
             alt="img"
           />
         </div>
-        <div>
+        <div className="main">
           <a href="https://houseofideas.club">Main Website</a>
         </div>
         <div className="dropdown">
@@ -33,11 +33,11 @@ const Header = () => {
           </label>
 
           <ul className="dropdown__items">
-            <li>Drama</li>
-            <li>Economics</li>
-            <li>Trading</li>
-            <li>Death</li>
-            <li>imperium</li>
+            <li><a href="#">Drama</a></li>
+            <li><a href="#">Economics</a></li>
+            <li><a href="#">Trading</a></li>
+            <li><a href="#">Death</a></li>
+            <li><a href="#">imperium</a></li>
           </ul>
         </div>
       </div>
