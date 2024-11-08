@@ -9,6 +9,7 @@ const Slider = ({ slides, options }) => {
   const [emblaRef] = useEmblaCarousel(options)
 
   return (
+    <>
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
@@ -17,11 +18,14 @@ const Slider = ({ slides, options }) => {
               <img src={slide.image} alt={slide.title} />
               <h2>{slide.title}</h2>
               <p>{slide.description}</p>
+              <button>Read More</button>
             </div>
           ))}
         </div>
       </div>
     </section>
+     
+    </>
   )
 }
 
@@ -51,7 +55,7 @@ const App = () => {
 
   return (
     <div>
-      <Slider slides={slides} options={{ loop: true }} />
+      <Slider slides={slides} options={{ loop: false }} />
     </div>
   )
 }
