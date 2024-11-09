@@ -122,6 +122,24 @@
     font-size: 1.2em;
     color: #6300aa;
    }
+
+   button{
+    position: relative;
+    left: 40%;
+    bottom: 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #ddd;
+    background-color: rgb(216, 65, 216);
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #8c43c0;
+    transition: 0.3s ease;
+}
 }
 
 .others{

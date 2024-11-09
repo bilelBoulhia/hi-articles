@@ -60,6 +60,7 @@ const Landing = () => {
               <img src="https://www.emeraldgrouppublishing.com/sites/default/files/2020-02/ejournal_subject_-_fw_-_education.jpg" alt="img" />
               <h1>Latest Creation</h1>
               <p>We are excited to launch our new e-journal, a digital platform dedicated to advancing knowledge, fostering discussions, and exploring the latest developments in our field. Our mission is to provide high-quality, peer-reviewed content that brings together voices from all corners of the community—researchers, educators, professionals, and students alike.This journal is designed to be a space for the exchange of ideas, research findings, and thought-provoking perspectives. We encourage you to engage with our content, share your work, and contribute to the ongoing conversation that will shape the future of our field.</p>
+              <button>Explore More</button>
            </div>
      
            <div className="others">

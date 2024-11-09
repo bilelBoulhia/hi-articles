@@ -12,7 +12,7 @@ const hero = () => {
       </div>
 
       <div className="hero-img">
-        <h1 className='aside'>here the article img</h1>
+        <img src="https://assets.propmark.com.br/uploads/2023/05/BIG_dia4_0907-220.jpg" alt="" />
       </div>
       
     </div>

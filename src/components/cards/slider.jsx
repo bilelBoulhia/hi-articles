@@ -1,9 +1,12 @@
 import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
+
+
 import one from '../../images/pic1.jpg'
 import two from '../../images/pic2.jpg'
 import three from '../../images/pic3.webp'
 import four from '../../images/pic4.jpg'
+
 
 const Slider = ({ slides, options }) => {
   const [emblaRef] = useEmblaCarousel(options)
