@@ -1,8 +1,9 @@
 .landing__container{
   display: grid;
   height: 100em;
+  width: 100%;
   background: linear-gradient(to bottom, #ddd, white);
-  padding: 2em;
+
   grid-template-columns: repeat(4,2fr);
   justify-items: center;
     align-items: center;
@@ -175,3 +176,41 @@ button:hover{
     }
 }
 
+@media (max-width: 1024px) {
+    .landing__container {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+  
+    .large {
+      grid-column: span 2;
+      width: 100%;
+      height: auto;
+    }
+  
+    .aside__article {
+      grid-column: span 2;
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .landing__container {
+      grid-template-columns: 1fr; 
+    }
+  
+    .large {
+      grid-column: span 1;
+      width: 70%;
+    }
+  
+    .aside__article {
+      grid-column: span 1;
+      width: 70%;
+    }
+  
+    .articles,
+    .others {
+      width: 70%;
+    }
+  }
