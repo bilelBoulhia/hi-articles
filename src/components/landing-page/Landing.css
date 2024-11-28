@@ -187,8 +187,8 @@ button:hover{
     }
 }
 .others:hover , .articles:hover , .large:hover, .aside__article:hover{
-  filter: blur(4px);
-  transform: scale(1.05);
+  
+  transform: scale(1.02);
   
 }
 
