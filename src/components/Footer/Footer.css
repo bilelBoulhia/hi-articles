@@ -64,9 +64,7 @@
     transform: scale(1.2);
   }
   @media (max-width: 768px) {
-    .footer{
-      bottom: -310 dvb;
-    }
+ 
     .infos {
       flex-direction: column;
       align-items: center;

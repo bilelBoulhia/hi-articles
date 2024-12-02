@@ -10,10 +10,10 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-   /*<>
-   <Hero /> 
-   <Slider  slides={Array.from(Array(5).keys())} options={{ align: 'start', dragFree: true, loop: true }} />
-   </>*/
+  /*<>
+    <Hero /> 
+    <Slider  slides={Array.from(Array(5).keys())} options={{ align: 'start', dragFree: true, loop: true }} />
+   </> */
    <>
     <Header />
     <Landing />

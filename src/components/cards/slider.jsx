@@ -2,6 +2,7 @@ import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 
 
+
 import one from '../../images/pic1.jpg'
 import two from '../../images/pic2.jpg'
 import three from '../../images/pic3.webp'

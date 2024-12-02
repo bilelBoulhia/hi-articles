@@ -201,8 +201,24 @@ button:hover{
   .large,
   .aside__article {
     grid-column: span 2;
-    width: 100%;
+    width: 80%;
     height: auto;
+    margin-top: 20px;
+  }
+
+  .others{
+    grid-column: span 2;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    
+    img{
+      width: 50%;
+      margin-top: 20px;
+      border-radius: 20px;
+    }
   }
 }
 
