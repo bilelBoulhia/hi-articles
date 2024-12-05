@@ -294,8 +294,9 @@ button:hover{
   .aside__article {
    font-size: 0;
   }
-  .articles,
-  .others {
+  .articles {
     width: 100%;
   }
+  
+
 } 

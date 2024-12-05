@@ -69,16 +69,3 @@
 .embla__slide__button:hover {
   background-color: rgb(59, 0, 114);
 }
-
-
-@media (max-width: 768px) {
-  .embla {
-    --slide-size: 50%;
-  }
-}
-
-@media (max-width: 480px) {
-  .embla {
-    --slide-size: 100%;
-  }
-}

@@ -8,9 +8,13 @@ const hero = () => {
 
      <div className="text">
        <img src="https://assets.propmark.com.br/uploads/2023/05/BIG_dia4_0907-220.jpg" alt="" />
-        <h1 className='headline'> new journal </h1>
-        <h3 className='content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis at excepturi aliquid consequatur, porro doloremque debitis tempore nulla sed explicabo, nam, illum itaque. Incidunt aut quas distinctio illo. A, numquam!</h3>
+       
+       
+        <h1> new journal </h1>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis at excepturi aliquid consequatur, porro doloremque debitis tempore nulla sed explicabo, nam, illum itaque. Incidunt aut quas distinctio illo. A, numquam!</h3>
+
         <p>Universities are vibrant hubs of knowledge and innovation, where students and faculty alike engage in activities that push the boundaries of science and technology. Among these initiatives, scientific activities organized by university clubs play a crucial role in complementing classroom learning, fostering curiosity, and preparing students for future challenges. These clubs provide a dynamic environment for collaboration, innovation, and the practical application of theoretical knowledge.
+        
 
 Platforms for Learning and Experimentation
 University science clubs serve as platforms where students can explore their interests beyond the constraints of the academic syllabus. These clubs often organize workshops, seminars, and hands-on projects in areas such as robotics, biotechnology, data science, and environmental studies. For instance, a robotics club may host coding and hardware design sessions, allowing members to construct autonomous robots. Similarly, biology-focused clubs might run DNA analysis workshops, offering students a chance to work with advanced laboratory equipment.
