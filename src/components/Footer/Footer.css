@@ -1,55 +1,82 @@
-.footer{
+.footer {
     background-color: rgb(0, 0, 0);
-    height: 200px;
+    padding: 20px 0;
+    width: 100%;
     position: relative;
     bottom: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.infos{
+  }
+  
+  .infos {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     width: 100%;
-    
-    .medias{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contacts,
+  .medias {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .contacts h2,
+  .medias h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+  }
+  
+  .contacts ul {
+    list-style: none;
+    padding: 0;
+    color: #fff;
+  }
+  
+  .contacts li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    margin: 5px 0;
+  }
+  
+  .contacts li a {
+    color: rgb(223, 11, 194);
+    text-decoration: none;
+  }
+  
+  .medias .media-icons {
     display: flex;
-    align-items: center;
-    justify-content: center;  
-    margin-top: 50px;
-    gap: 20px;
-
-    img{
-        width: 50px;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .medias img {
+    width: 40px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .medias img:hover {
+    transform: scale(1.2);
+  }
+  @media (max-width: 768px) {
+ 
+    .infos {
+      flex-direction: column;
+      align-items: center;
     }
-
-    h2{
-        font-family: 'Courier New', Courier, monospace;
-        color: #fff;
+  
+    .contacts h2,
+    .medias h2 {
+      font-size: 1.2em;
     }
-}
-
-   .contacts{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    
-    h2{
-        font-family: 'Courier New', Courier, monospace;
-        color: #fff;
+  
+    .medias img {
+      width: 30px;
     }
-
-    li{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #fff;
-        font-size: 1.15em;
-    }
-
-    li a{
-      color: rgb(223, 11, 194);
-    }
-   }
-}
-
+  }
+  

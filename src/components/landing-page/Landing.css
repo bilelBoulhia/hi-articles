@@ -187,8 +187,13 @@ button:hover{
     }
 }
 .others:hover , .articles:hover , .large:hover, .aside__article:hover{
+<<<<<<< HEAD
   filter: blur(4px);
   transform: scale(1.05);
+=======
+  
+  transform: scale(1.02);
+>>>>>>> main
   
 }
 
@@ -201,6 +206,7 @@ button:hover{
   .large,
   .aside__article {
     grid-column: span 2;
+<<<<<<< HEAD
     width: 100%;
     height: auto;
   }
@@ -256,12 +262,75 @@ button:hover{
     }
   }
   .others {
+=======
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .others{
+    grid-column: span 2;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    
+    img{
+      width: 50%;
+      margin-top: 20px;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .landing__container {
+    grid-template-columns: 1fr; 
+  }
+
+  
+  .large{
+    grid-column: span 1;
+    order: 1;
+    height: 600px;
+    width: 400px;
+    font-size: small;
+    img{
+      width: 350px;
+      height: 150px;
+      margin-left: 25px;
+    
+      
+  }
+  }
+  .aside__article {
+    grid-column: span 1;
+    order: 3;
+    height: 500px;
+    width: 400px;
+    font-size: small;
+    gap: 10px;
+   
+    img{
+      width: 350px;
+      height: 150px;
+      float: none;
+      
+    
+      
+  }
+  }
+
+  .articles{
+>>>>>>> main
     grid-column: span 1;
     width: 100%;
     order: 2; 
     height: 300px;
     width: 400px;
     font-size: small;
+<<<<<<< HEAD
     order: 3;
     
     img{
@@ -269,6 +338,25 @@ button:hover{
       margin-left: 70px;
     }
   }
+=======
+    img{
+      margin-top: 30px;
+    }
+  }
+  .others {
+    grid-column: span 1;
+    width: 100%;
+    order: 2; 
+    height: 300px;
+    width: 400px;
+    font-size: small;
+    
+    img{
+      margin-top: 30px;
+      margin-left: 70px;
+    }
+  }
+>>>>>>> main
 }
 
 @media (max-width: 480px) {
@@ -279,8 +367,16 @@ button:hover{
   .aside__article {
    font-size: 0;
   }
+<<<<<<< HEAD
   .articles,
   .others {
     width: 100%;
   }
+=======
+  .articles {
+    width: 100%;
+  }
+  
+
+>>>>>>> main
 } 

@@ -4,6 +4,7 @@ import Hero from './components/Hero/Hero'
 import Slider from "./components/cards/slider";
 import './components/cards/embla.css';
 
+<<<<<<< HEAD
 import Landing from "./components/landing-page/Landing";
 import Footer from "./components/Footer/Footer"
 
@@ -18,6 +19,23 @@ function App() {
       <Footer/>
    
     </></>
+=======
+/*import Landing from "./components/landing-page/Landing";*/
+import Footer from './components/Footer/Footer';
+
+
+function App() {
+  return (
+  /*<><Landing />
+    
+   </> */
+   <>
+    <Header />
+    <Hero /> 
+    <Slider  slides={Array.from(Array(5).keys())} options={{ align: 'start', dragFree: true, loop: true }} />
+    <Footer />
+    </>
+>>>>>>> main
   );
 }
 
