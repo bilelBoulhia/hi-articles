@@ -1,41 +1,24 @@
 import React from 'react';
 import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero'
+/*import Hero from './components/Hero/Hero'
 import Slider from "./components/cards/slider";
-import './components/cards/embla.css';
+import './components/cards/embla.css';*/
 
-<<<<<<< HEAD
 import Landing from "./components/landing-page/Landing";
-import Footer from "./components/Footer/Footer"
-
-function App() {
-  return (
-  
-   <>
-   <Header />
-   < Hero /><Slider slides={Array.from(Array(5).keys())} options={{ align: 'start', dragFree: true, loop: true }} /><>
-      
-      <Landing />
-      <Footer/>
-   
-    </></>
-=======
-/*import Landing from "./components/landing-page/Landing";*/
 import Footer from './components/Footer/Footer';
 
 
 function App() {
   return (
-  /*<><Landing />
-    
-   </> */
+   /*<>
+    <Hero /> 
+    <Slider  slides={Array.from(Array(5).keys())} options={{ align: 'start', dragFree: true, loop: true }} /
+   </>*/
    <>
     <Header />
-    <Hero /> 
-    <Slider  slides={Array.from(Array(5).keys())} options={{ align: 'start', dragFree: true, loop: true }} />
+    <Landing />
     <Footer />
     </>
->>>>>>> main
   );
 }
 
