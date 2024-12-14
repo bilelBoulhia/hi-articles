@@ -1,18 +1,36 @@
-.cards{
-    img{
-        width: 150px;
-        border-radius: 20px 20px 20px;
-    }
-    
-    h3{
-      font-size: 1.2em;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: blueviolet;
-    }
+.cards {
+    display: flex;
+    align-items: center; 
+    gap: 1rem; 
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
 
-    p{
-        font-size: 1.15em;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: 600;
-    }
+.cards img {
+    width: 200px;
+    height: auto; 
+    border-radius: 20px; 
+    flex-shrink: 0; 
+}
+
+.cards h3 {
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blueviolet;
+    margin: 0;
+}
+
+.cards p {
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cards-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
 }

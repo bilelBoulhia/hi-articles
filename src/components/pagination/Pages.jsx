@@ -25,13 +25,17 @@ const Pages = () => {
   const onPageChange = (page) => setCurrentPage(page);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="container">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
         {currentItems.map((item, index) => (
           <div key={index} className="cards">
             <img  src={item.images}/>
+
+            <div className="text">
             <h3 >{item.header}</h3>
             <p >{item.description}</p>
+            </div>
+            
           </div>
         ))}
       </div>
