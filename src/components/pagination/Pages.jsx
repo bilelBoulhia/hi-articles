@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Pagination } from 'flowbite-react';
+import './Pages.css'
 
 const Pages = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -8,6 +9,7 @@ const Pages = () => {
 
   // Fake data
   const fakeData = Array.from({ length: 100 }, (_, index) => ({
+    images: 'https://via.placeholder.com/150',
     header: `Item ${index + 1}`,
     description: `This is the description for item ${index + 1}.`,
   }));
@@ -26,9 +28,10 @@ const Pages = () => {
     <div className="flex flex-col items-center">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
         {currentItems.map((item, index) => (
-          <div key={index} className="p-4 border rounded shadow">
-            <h3 className="text-lg font-semibold">{item.header}</h3>
-            <p className="text-sm text-gray-600">{item.description}</p>
+          <div key={index} className="cards">
+            <img  src={item.images}/>
+            <h3 >{item.header}</h3>
+            <p >{item.description}</p>
           </div>
         ))}
       </div>
@@ -42,3 +45,4 @@ const Pages = () => {
 };
 
 export default Pages;
+
