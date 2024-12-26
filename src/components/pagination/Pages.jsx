@@ -40,6 +40,7 @@ const Pages = () => {
         ))}
       </div>
       <Pagination
+        className="pagination-container"
         currentPage={currentPage}
         totalPages={totalPages}
         onPageChange={onPageChange}
