@@ -1,5 +1,5 @@
 .footer {
-    background-color: rgb(0, 0, 0);
+    background-color: #0d0018;
     padding: 20px 0;
     width: 100%;
     position: relative;
@@ -44,7 +44,7 @@
   }
   
   .contacts li a {
-    color: rgb(223, 11, 194);
+    color: rgb(163, 65, 255);
     text-decoration: none;
   }
   

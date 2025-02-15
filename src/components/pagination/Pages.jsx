@@ -9,7 +9,7 @@ const Pages = () => {
 
   // Fake data
   const fakeData = Array.from({ length: 100 }, (_, index) => ({
-    images: 'https://via.placeholder.com/150',
+    images: 'https://hds.hel.fi/images/foundation/visual-assets/placeholders/image-s.png',
     header: `Item ${index + 1}`,
     description: `This is the description for item ${index + 1}.`,
   }));

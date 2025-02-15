@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import tiktok from '../../images/icons8-tiktok-50.png';
+import {FaTiktok } from 'react-icons/fa';
 import instagram from '../../images/icons8-instagram-50.png';
 import linkedin from '../../images/icons8-linkedin-50.png';
 import facebook from '../../images/icons8-facebook-50.png';
@@ -28,16 +28,16 @@ const Footer = () => {
         <div className="medias">
           <h2>Our Medias:</h2>
           <div className="media-icons">
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-              <img src={tiktok} alt="TikTok" />
+            <a href="https://tiktok.com">
+              <FaTiktok color='white' size={35}/>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com">
               <img src={instagram} alt="Instagram" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com">
               <img src={linkedin} alt="LinkedIn" />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://facebook.com">
               <img src={facebook} alt="Facebook" />
             </a>
           </div>

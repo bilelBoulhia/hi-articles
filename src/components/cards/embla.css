@@ -70,3 +70,10 @@ button:hover {
   background-color: rgb(59, 0, 114);
 }
 }
+
+@media (max-width:768px) {
+  button {
+   width: 5em;
+   margin-top: 20px;
+  }
+}

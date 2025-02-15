@@ -5,14 +5,14 @@ import './Hero.css'
 const hero = () => {
   return (
     <div className='hero-container'>
-
+     
+     <img src="https://assets.propmark.com.br/uploads/2023/05/BIG_dia4_0907-220.jpg" alt="" />
+     
      <div className="text">
-       <img src="https://assets.propmark.com.br/uploads/2023/05/BIG_dia4_0907-220.jpg" alt="" />
-       
-       
         <h1> new journal </h1>
         <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis at excepturi aliquid consequatur, porro doloremque debitis tempore nulla sed explicabo, nam, illum itaque. Incidunt aut quas distinctio illo. A, numquam!</h3>
 
+        <div className="description">
         <p>Universities are vibrant hubs of knowledge and innovation, where students and faculty alike engage in activities that push the boundaries of science and technology. Among these initiatives, scientific activities organized by university clubs play a crucial role in complementing classroom learning, fostering curiosity, and preparing students for future challenges. These clubs provide a dynamic environment for collaboration, innovation, and the practical application of theoretical knowledge.
         
 
@@ -34,6 +34,9 @@ These interdisciplinary interactions prepare students for the collaborative natu
 Inspiring Community Engagement
 Beyond fostering personal growth, university clubs also contribute to societal advancement. Many scientific clubs engage in community outreach activities, such as organizing science fairs for local schools, conducting workshops for underserved communities, or running awareness campaigns on pressing global issues like climate change. Such efforts inspire young minds, promote scientific literacy, and create a positive impact on society.
         </p>
+      </div>
+      
+      
       </div>
       
     </div>

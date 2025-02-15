@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <>
     <div className='landing__container'>
-    <div className="large">
+            <div className="large">
               <img src={pic}/>
               <h1>Main Article</h1>
               <p>In a world full of distractions, daily habits are powerful tools for building success. Small, consistent actions—like setting goals, exercising, or reading—can transform our lives over time. Habits shape our identity, creating a foundation for personal growth. By focusing on positive habits, we build discipline and foster resilience, even when challenges arise. Successful people prioritize these routines because they lead to big results with minimal effort each day. Ultimately, success isn’t built overnight; it’s crafted through daily habits that help us achieve our goals, step by step.</p>

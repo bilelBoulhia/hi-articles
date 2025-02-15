@@ -2,7 +2,9 @@
   display: grid;
   height: 100em;
   width: 100%;
-  background: linear-gradient(to bottom, #ddd, white);
+  background: #fff;
+
+
 
   grid-template-columns: repeat(4,2fr);
   justify-items: center;
