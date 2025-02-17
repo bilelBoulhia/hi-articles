@@ -2,8 +2,7 @@ import {ChevronLeft, ChevronRight} from 'lucide-react'
 import React, {ComponentPropsWithRef, HTMLAttributes, useCallback, useEffect, useState} from 'react'
 import {EmblaOptionsType, EmblaCarouselType} from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
-import {cn} from "@/app/lib/utils"
-
+import {cn} from "@/lib/utils";
 
 type UseArrowButtonsType = {
     canScrollPrev: boolean

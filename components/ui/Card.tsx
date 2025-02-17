@@ -1,25 +1,13 @@
 
 import React from "react";
-import {cn} from "@/app/lib/utils";
+
 
 import {m, MotionProps} from "framer-motion";
 
 
 import {Badge} from "@/components/ui/badge";
 import {shadowVariants} from "@/utils/types";
-
-
-
-
-
-
-
-
-
-
-
-
-
+import {cn} from "@/lib/utils";
 
 interface CardProps extends MotionProps {
     children: React.ReactNode;

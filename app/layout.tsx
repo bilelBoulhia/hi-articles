@@ -1,10 +1,8 @@
-
-import { ThemeSwitcher } from "@/components/theme-switcher";
-import { hasEnvVars } from "@/utils/supabase/check-env-vars";
 import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import Link from "next/link";
 import "./globals.css";
+import Footer from "@/app/sections/Footer";
+import Header from "@/app/sections/Header";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -29,30 +27,23 @@ export default function RootLayout({
   return (
     <html lang="en" className={geistSans.className} suppressHydrationWarning>
       <body className="bg-background text-foreground">
-        <ThemeProvider
+      <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+
+          defaultTheme='system'
           enableSystem
           disableTransitionOnChange
-        >
-          <main className="min-h-screen flex flex-col items-center">
-            <div className="flex-1 w-full flex flex-col gap-20 items-center">
-              <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
+      >
 
+          <Header/>
+          <main className="min-h-[100dvh] overflow-x-hidden flex flex-col z-0 items-center">
+            {children}
 
-              </nav>
-              <div className="flex flex-col gap-20 max-w-5xl p-5">
-                {children}
-              </div>
-
-              <footer className="w-full flex items-center justify-center border-t mx-auto text-center text-xs gap-8 py-16">
-              
-                <ThemeSwitcher />
-              </footer>
-            </div>
           </main>
-        </ThemeProvider>
+          <Footer/>
+
+      </ThemeProvider>
       </body>
     </html>
-  );
+);
 }

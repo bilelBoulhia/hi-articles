@@ -1,7 +1,5 @@
-
 import {m} from "framer-motion"
-
-import { cn } from "@/app/lib/utils"
+import {cn} from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority"
 
 export type AnimatedHeading = {

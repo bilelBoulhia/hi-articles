@@ -1,6 +1,5 @@
 import React from "react";
-import {cn} from "@/app/lib/utils";
-
+import {cn} from "@/lib/utils";
 
 //absolute  h-full w-full inset-0  [mask-size:40px] [mask-repeat:no-repeat]
  const BackgroundBeams = React.memo(
@@ -9,7 +8,6 @@ import {cn} from "@/app/lib/utils";
             <div style={style} className={cn("fixed inset-0  [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center",
                     className
                 )}
-
             >
                 <svg
                     className=" z-0 h-full w-full pointer-events-none absolute "

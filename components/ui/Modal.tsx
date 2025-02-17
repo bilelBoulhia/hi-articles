@@ -1,5 +1,5 @@
 "use client";
-import {cn} from "@/app/lib/utils";
+import {cn} from "@/lib/utils";
 import { AnimatePresence, m } from "framer-motion";
 import React, {
     ReactNode,
@@ -77,7 +77,7 @@ export const ModalBody = forwardRef<ModalBodyRef, {
     }, [open]);
 
 
-    const modalRef = useRef(null);
+    const modalRef = useRef<any>(null);
     const { setOpen } = useModal();
     useOutsideClick(modalRef, () => setOpen(false));
     useImperativeHandle(ref, () => ({

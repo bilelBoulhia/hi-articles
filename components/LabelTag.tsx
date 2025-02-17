@@ -1,6 +1,6 @@
 import {Sparkles} from "lucide-react";
 import React from "react";
-import {cn} from "@/app/lib/utils";
+import {cn} from "@/lib/utils";
 
 export const LabelTag =({className,Label}:{Label:string,className?:string})=>{
     return (

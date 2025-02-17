@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {cn} from "@/app/lib/utils";
+import {cn} from "@/lib/utils";
 
 const ViewportWrappper = ({children,className}:{className?:string,children:React.ReactNode}) => {
     const [vh, setVh] = useState(0);

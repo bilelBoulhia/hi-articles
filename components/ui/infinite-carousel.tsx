@@ -1,8 +1,8 @@
 "use client";
 
-import { cn } from "@/app/lib/utils";
+import {cn} from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import {Tables} from "@/utils/DatabaseTypes";
+
 
 export const InfiniteMovingCards = ({
   items,
@@ -11,7 +11,7 @@ export const InfiniteMovingCards = ({
   pauseOnHover = true,
   className,
 }: {
-  items: Tables<'reviews'>[];
+  items: any[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
