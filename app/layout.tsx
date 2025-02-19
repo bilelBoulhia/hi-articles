@@ -36,9 +36,8 @@ export default function RootLayout({
       >
 
           <Header/>
-          <main className="min-h-[100dvh] overflow-x-hidden flex flex-col z-0 items-center">
+          <main className="min-h-[100dvh] overflow-x-hidden flex flex-col  z-0 items-center">
             {children}
-
           </main>
           <Footer/>
 
