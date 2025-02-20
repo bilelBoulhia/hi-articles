@@ -20,7 +20,7 @@ const LetterPair: React.FC<LetterPairProps> = ({
     return (
         <motion.span
             style={{ transform: `translateX(${index}ch)` }}
-            className="inline-block mt-1 relative will-change-transform"
+            className="inline-block relative will-change-transform"
         >
             <AnimatePresence>
                 <motion.span
@@ -28,7 +28,7 @@ const LetterPair: React.FC<LetterPairProps> = ({
                     initial={{ height: "auto" }}
                     animate={{ height: 0 }}
                     exit={{ height: 0 }}
-                    transition={{ duration: 0.5, delay: delay / 1500 }}
+                    transition={{ duration: 0.5, delay: 0.75 + delay / 1500 }} // Added 3s delay
                     className="absolute overflow-hidden left-0 top-0"
                 >
                     {initialLetter}
@@ -39,7 +39,7 @@ const LetterPair: React.FC<LetterPairProps> = ({
                     initial={{ height: 0 }}
                     animate={{ height: "auto" }}
                     exit={{ height: 0 }}
-                    transition={{ duration: 0.5, delay: delay / 1500 }}
+                    transition={{ duration: 0.5, delay: 1.5 + delay / 1500 }} // Added 3s delay
                     className="absolute overflow-hidden left-0 bottom-0"
                 >
                     {transformedLetter}
@@ -68,11 +68,13 @@ const WordTransform: React.FC<WordTransformProps> = ({
         <div
 
             style={{
-                fontFamily:'"Liberation Mono"'
+                fontFamily: '"Liberation Mono"'
             }}
 
             className={cn(className, "whitespace-nowrap")}>
+
             {letterPairs.map((pair, index) => (
+
                 <LetterPair
                     key={index}
                     initialLetter={pair[0]}

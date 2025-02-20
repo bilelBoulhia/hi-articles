@@ -1,127 +1,115 @@
-import {ChevronLeft, ChevronRight} from 'lucide-react'
-import React, {ComponentPropsWithRef, HTMLAttributes, useCallback, useEffect, useState} from 'react'
-import {EmblaOptionsType, EmblaCarouselType} from 'embla-carousel'
-import useEmblaCarousel from 'embla-carousel-react'
-import {cn} from "@/lib/utils";
+"use client"
 
-type UseArrowButtonsType = {
-    canScrollPrev: boolean
-    canScrollNext: boolean
-    onPrevButtonClick: () => void
-    onNextButtonClick: () => void
+import type React from "react"
+import { useState, useEffect, useCallback } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import type { StaticImageData } from "next/image"
+import { ArrowRight } from "lucide-react"
+
+export interface article {
+  id: number
+  title: string
+  img: StaticImageData
+  description: string
 }
 
-interface PropType extends HTMLAttributes<HTMLDivElement> {
-    options?: EmblaOptionsType
-    children: React.ReactNode
-    className?: string
-    useArrows?: boolean
-    slideClassName?: string
+interface VideoCarouselProps {
+  articles: article[]
 }
 
-const EmblaCarousel: React.FC<PropType> = ({
-                                               options,
-                                               children,
-                                               className,
-                                               slideClassName,
-                                               useArrows = false,
-                                               ...props
-                                           }) => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({
-        ...options,
-        align: 'center',
-        containScroll: 'trimSnaps',
-    })
+const Carousel: React.FC<VideoCarouselProps> = ({ articles }) => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
 
-    const {canScrollPrev, canScrollNext, onPrevButtonClick, onNextButtonClick} = useArrowButtons(emblaApi)
+  const handleResize = useCallback(() => {
+    setIsMobile(window.innerWidth < 768)
+  }, [])
 
-    return (
-        <section className={cn("w-full mx-auto mt-5  relative ", className)} {...props}>
-            <div className="overflow-hidden  " ref={emblaRef}>
-                <div className="flex">
-                    {React.Children.map(children, (child, index) => (
-                        <div key={index} className={cn(" min-w-0 relative  ", slideClassName)}>
-                            {child}
-                        </div>
-                    ))}
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [handleResize])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % articles.length)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [articles.length])
+
+  return (
+      <div className="relative w-full h-screen rounded-lg flex items-center justify-center overflow-hidden">
+        <AnimatePresence initial={false}>
+          {articles.map((article, index) => (
+              <motion.div
+                  key={article.id}
+                  className={`absolute w-[80%] h-[70%] bg-black bg-opacity-60 rounded-2xl shadow-xl shadow-black flex items-center justify-center overflow-hidden
+                        ${index === currentIndex ? "z-20" : "z-10"} 
+                        ${index === (currentIndex + 1) % articles.length ? "z-0" : ""} 
+                        ${index === (currentIndex - 1 + articles.length) % articles.length ? "z-0" : ""}`}
+                  initial={{
+                    scale: 0.8,
+                    x: index > currentIndex ? "100%" : "-100%",
+                    opacity: 0,
+                    rotateY: index > currentIndex ? 45 : -45,
+                  }}
+                  animate={{
+                    scale: index === currentIndex ? 1 : 0.8,
+                    x: index === currentIndex ? 0 : index > currentIndex ? "100%" : "-100%",
+                    opacity: index === currentIndex ? 1 : 0.3,
+                    rotateY: index === currentIndex ? 0 : index > currentIndex ? 45 : -45,
+                  }}
+                  exit={{
+                    scale: 0.8,
+                    x: index < currentIndex ? "-100%" : "100%",
+                    opacity: 0,
+                    rotateY: index < currentIndex ? -45 : 45,
+                  }}
+                  transition={{ duration: 0.7, ease: "easeInOut" }}
+              >
+                <div className="relative w-full h-full group">
+                  <img
+                      alt={article.title}
+                      src={article.img.src || "/placeholder.svg"}
+                      className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                  <div
+                      className={`absolute max-w-96 bg-black/10 sm:bg-transparent backdrop-blur sm:backdrop-blur-none bottom-0 left-0 right-0 p-6 text-white transform ${
+                          isMobile ? "" : "translate-y-full group-hover:translate-y-0"
+                      } transition-transform duration-300 ease-in-out`}
+                  >
+                    <span className="text-3xl font-bold">{article.title}</span>
+                    <p className="text-sm opacity-80 mt-1 mb-4">{article.description}</p>
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="relative group flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm border border-white/10 text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-white/20 hover:border-white/20"
+                    >
+                      Read More
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      <div className="absolute inset-0 rounded-full bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </motion.button>
+                  </div>
                 </div>
-            </div>
-            {useArrows && (
-                <>
-                    <ArrowButton
-                        onClick={onPrevButtonClick}
-                        disabled={!canScrollPrev}
-                        className="absolute  left-2 top-1/2 transform -translate-y-1/2 z-10"
-                    >
-                        <ChevronLeft className="w-6  h-6"/>
-                    </ArrowButton>
-                    <ArrowButton
-                        onClick={onNextButtonClick}
-                        disabled={!canScrollNext}
-                        className="absolute right-2  top-1/2 transform -translate-y-1/2 z-10"
-                    >
-                        <ChevronRight className="w-6 h-6"/>
-                    </ArrowButton>
-                </>
-            )}
-        </section>
-    )
+              </motion.div>
+          ))}
+        </AnimatePresence>
+
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {articles.map((_, index) => (
+              <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-white" : "bg-gray-400"} transition-colors duration-300`}
+                  aria-label={`Go to video ${index + 1}`}
+              ></button>
+          ))}
+        </div>
+      </div>
+  )
 }
 
-const useArrowButtons = (
-    emblaApi: EmblaCarouselType | undefined
-): UseArrowButtonsType => {
-    const [canScrollPrev, setCanScrollPrev] = useState(false)
-    const [canScrollNext, setCanScrollNext] = useState(false)
+export default Carousel
 
-    const onPrevButtonClick = useCallback(() => {
-        if (!emblaApi) return
-        emblaApi.scrollPrev()
-    }, [emblaApi])
-
-    const onNextButtonClick = useCallback(() => {
-        if (!emblaApi) return
-        emblaApi.scrollNext()
-    }, [emblaApi])
-
-    const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-        setCanScrollPrev(emblaApi.canScrollPrev())
-        setCanScrollNext(emblaApi.canScrollNext())
-    }, [])
-
-    useEffect(() => {
-        if (!emblaApi) return
-
-        onSelect(emblaApi)
-        emblaApi.on('reInit', onSelect)
-        emblaApi.on('select', onSelect)
-    }, [emblaApi, onSelect])
-
-    return {
-        canScrollPrev,
-        canScrollNext,
-        onPrevButtonClick,
-        onNextButtonClick
-    }
-}
-
-type ArrowButtonProps = ComponentPropsWithRef<'button'>
-
-const ArrowButton: React.FC<ArrowButtonProps> = ({ className, children, ...props }) => {
-    return (
-        <button
-            type="button"
-            className={cn(
-                "focus:outline-none rounded-full p-2 shadow-md",
-                "disabled:opacity-50 disabled:cursor-not-allowed",
-                "hover:bg-neutral-800 hover:bg-opacity-70  transition-colors",
-                className
-            )}
-            {...props}
-        >
-            {children}
-        </button>
-    )
-}
-
-export default EmblaCarousel
