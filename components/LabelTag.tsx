@@ -2,7 +2,7 @@ import {Sparkles} from "lucide-react";
 import React from "react";
 import {cn} from "@/lib/utils";
 
-export const LabelTag =({className,Label}:{Label:string,className?:string})=>{
+export const LabelTags =({className,Label}:{Label:string,className?:string})=>{
     return (
         <div className="absolute top-2 right-2 z-10">
             <div
