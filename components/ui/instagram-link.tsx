@@ -1,7 +1,7 @@
 "use client"
 
 import {useEffect} from "react"
-import {m, useAnimation} from "framer-motion"
+import {motion, useAnimation} from "motion/react"
 import {Instagram} from "lucide-react"
 
 interface InstagramLinkProps {
@@ -35,12 +35,12 @@ export default function InstagramLink({href,
     }
 
     return (
-        <m.div
+        <motion.div
             className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-pink-500  rounded-full"
             whileHover={{scale: 1.05}}
             whileTap={{scale: 0.95}}
         >
-            <m.a
+            <motion.a
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -51,7 +51,7 @@ export default function InstagramLink({href,
                 <div className="bg-white p-2 rounded-full">
                     <Instagram className="w-4 h-4 text-pink-500"/>
                 </div>
-                <m.div
+                <motion.div
                     initial={{width: 0, opacity: 0, x: -20}}
                     animate={controls}
                     className="overflow-hidden ml-2"
@@ -61,8 +61,8 @@ export default function InstagramLink({href,
                           @{instagramUsername}
                  </span>
 
-                </m.div>
-            </m.a>
-        </m.div>
+                </motion.div>
+            </motion.a>
+        </motion.div>
     )
 }

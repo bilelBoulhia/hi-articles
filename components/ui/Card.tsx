@@ -2,7 +2,7 @@
 import React from "react";
 
 
-import {m, MotionProps} from "framer-motion";
+import {motion, MotionProps} from "motion/react";
 
 
 import {Badge} from "@/components/ui/badge";
@@ -17,7 +17,7 @@ interface CardProps extends MotionProps {
 export const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
     return (
 
-        <m.div
+        <motion.div
               initial="hidden"
               viewport={{once:true}}
               whileInView="visible"
@@ -31,7 +31,7 @@ export const Card: React.FC<CardProps> = ({ children, className, ...props }) => 
 
             {children}
 
-        </m.div>
+        </motion.div>
 
 
     );
@@ -48,7 +48,7 @@ export const CardContent = ({children, className}: { children?: React.ReactNode,
 }
 export const CardTitle=({children,className}:{children:string,className?:string}) => {
     return (
-        <m.h2
+        <motion.h2
             style={{
                 zIndex: -2,
             }}
@@ -60,7 +60,7 @@ export const CardTitle=({children,className}:{children:string,className?:string}
 
             className={cn("mb-2 line-clamp-1",className)}
         >{children}
-        </m.h2>
+        </motion.h2>
     )
 }
 

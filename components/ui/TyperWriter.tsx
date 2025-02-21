@@ -1,7 +1,7 @@
 "use client";
 
 import {cn} from "@/lib/utils";
-import { m, stagger, useAnimate, useInView } from "framer-motion";
+import { motion, stagger, useAnimate, useInView } from "motion/react";
 import { useEffect } from "react";
 
 export const TypewriterEffect = ({
@@ -46,12 +46,12 @@ export const TypewriterEffect = ({
 
     const renderWords = () => {
         return (
-            <m.div ref={scope} className="inline">
+            <motion.div ref={scope} className="inline">
                 {wordsArray.map((word, idx) => {
                     return (
                         <div key={`word-${idx}`} className="inline-block">
                             {word.text.map((char, index) => (
-                                <m.span
+                                <motion.span
                                     initial={{}}
                                     key={`char-${index}`}
                                     className={cn(
@@ -60,13 +60,13 @@ export const TypewriterEffect = ({
                                     )}
                                 >
                                     {char}
-                                </m.span>
+                                </motion.span>
                             ))}
                             &nbsp;
                         </div>
                     );
                 })}
-            </m.div>
+            </motion.div>
         );
     };
     return (
@@ -74,7 +74,7 @@ export const TypewriterEffect = ({
             className={cn(className)}>
 
             {renderWords()}
-            <m.span>█</m.span>
+            <motion.span>█</motion.span>
         </div>
     );
 };
@@ -122,7 +122,7 @@ export const TypewriterEffectSmooth = ({
 
     return (
         <div className={cn("flex space-x-1 my-6", className)}>
-            <m.div
+            <motion.div
                 className="overflow-hidden pb-2"
                 initial={{
                     width: "0%",
@@ -144,8 +144,8 @@ export const TypewriterEffectSmooth = ({
                 >
                     {renderWords()}{" "}
                 </div>{" "}
-            </m.div>
-            <m.span
+            </motion.div>
+            <motion.span
                 initial={{
                     opacity: 0,
                 }}
@@ -162,7 +162,7 @@ export const TypewriterEffectSmooth = ({
                     "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-blue-500",
                     cursorClassName
                 )}
-            ></m.span>
+            ></motion.span>
         </div>
     );
 };

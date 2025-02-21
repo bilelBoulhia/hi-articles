@@ -14,7 +14,7 @@ export default function Header(){
             <NewHiIcon className='w-[2rem]' animate={true}/>
            <div className='flex  justify-center items-center'>
                <TubeLightNavbar/>
-               <div className=' inline-block md:min-w-[320px] '>
+               <div className=' inline-block  md:min-w-[320px] '>
                    <SearchModal/>
                </div>
 

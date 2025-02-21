@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { m } from "framer-motion";
+import { motion } from "motion/react";
 import {StaticImageData} from "next/image";
 
 let interval: any;
@@ -42,7 +42,7 @@ export const CardStack = ({
     <div className="relative  h-60 w-60 md:h-60 md:w-96">
       {cards.map((card, index) => {
         return (
-          <m.img
+          <motion.img
             key={card.id}
             src={card.img.src}
             alt='s'
@@ -57,7 +57,7 @@ export const CardStack = ({
             }}
           >
 
-          </m.img>
+          </motion.img>
         );
       })}
     </div>

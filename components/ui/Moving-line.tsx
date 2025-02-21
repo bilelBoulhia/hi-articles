@@ -1,11 +1,11 @@
 'use client'
 import React, {FC, HTMLAttributes, useRef} from "react";
 import {
-    m,
+    motion,
     useScroll,
     useSpring,
     useTransform,
-} from "framer-motion";
+} from "motion/react";
 import {cn} from "@/lib/utils";
 
 interface props extends HTMLAttributes<HTMLDivElement> {
@@ -61,7 +61,7 @@ const MovingLine : FC<props> = ({ Content ,className }) => {
                         <stop offset="1" stopColor="#14b8a6" />
                     </linearGradient>
                 </defs>
-                <m.path
+                <motion.path
                     style={{
                         pathLength: useSpring(pathLengthValue, {
                             stiffness: 500,

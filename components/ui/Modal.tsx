@@ -1,6 +1,6 @@
 "use client";
 import {cn} from "@/lib/utils";
-import { AnimatePresence, m } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import React, {
     ReactNode,
     createContext,
@@ -87,7 +87,7 @@ export const ModalBody = forwardRef<ModalBodyRef, {
     return (
         <AnimatePresence >
             {open && (
-                <m.div
+                <motion.div
 
                     initial={{
                         opacity: 0,
@@ -107,7 +107,7 @@ export const ModalBody = forwardRef<ModalBodyRef, {
                 >
                     <Overlay />
 
-                    <m.div
+                    <motion.div
                         ref={modalRef}
                         className={cn(
                             "max-h-[80%] max-w-full md:max-w-[60%] mx-4 bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800  rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden ",
@@ -138,8 +138,8 @@ export const ModalBody = forwardRef<ModalBodyRef, {
                     >
                         <CloseIcon />
                         {children}
-                    </m.div>
-                </m.div>
+                    </motion.div>
+                </motion.div>
             )}
         </AnimatePresence>
 
@@ -163,7 +163,7 @@ export const ModalContent = ({
 
 const Overlay = ({ className }: { className?: string }) => {
     return (
-        <m.div
+        <motion.div
 
             initial={{
                 opacity: 0,
@@ -177,7 +177,7 @@ const Overlay = ({ className }: { className?: string }) => {
                 backdropFilter: "blur(0px)",
             }}
             className={`fixed  inset-0 h-full w-full bg-black bg-opacity-50 z-50 ${className}`}
-        ></m.div>
+        ></motion.div>
     );
 };
 

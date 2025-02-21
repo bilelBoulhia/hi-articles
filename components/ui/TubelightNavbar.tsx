@@ -1,14 +1,14 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 import Link from 'next/link';
 import { Inter } from 'next/font/google';
 
-import {FaBriefcase, FaFileAlt, FaUser} from "react-icons/fa";
+
 import {GoHomeFill} from "react-icons/go";
 import {GrArticle} from "react-icons/gr";
-import {IconCategory} from "@tabler/icons-react";
+
 import {CgWebsite} from "react-icons/cg";
 import {BiCategory} from "react-icons/bi";
 
@@ -68,7 +68,7 @@ function TubeLightNavbar() {
 
   return (
     <div className='  z-50 mb-6 pt-6'>
-      <div className={`${inter.className} flex   items-center gap-3 `}>
+      <div className={`${inter.className} flex   items-center sm:gap-2 gap-0 `}>
         {tabs.map((tab) => (
           <Link
             key={tab.name}

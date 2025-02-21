@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Footer from "@/app/sections/Footer";
 import Header from "@/app/sections/Header";
+import AbstractBackground from "@/components/ui/abstract-background";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -27,15 +28,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={geistSans.className} suppressHydrationWarning>
       <body className="bg-background text-foreground">
+      <AbstractBackground/>
       <ThemeProvider
           attribute="class"
 
-          defaultTheme='system'
+          defaultTheme='ligth'
           enableSystem
           disableTransitionOnChange
       >
 
           <Header/>
+
           <main className="min-h-[100dvh] overflow-x-hidden flex flex-col  z-0 items-center">
               {children}
           </main>

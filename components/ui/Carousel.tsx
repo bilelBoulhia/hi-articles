@@ -1,8 +1,8 @@
 "use client"
 
 import type React from "react"
-import { useState, useEffect, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect} from "react"
+import { motion, AnimatePresence } from "motion/react"
 import type { StaticImageData } from "next/image"
 import { ArrowRight } from "lucide-react"
 
@@ -19,16 +19,9 @@ interface VideoCarouselProps {
 
 const Carousel: React.FC<VideoCarouselProps> = ({ articles }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
 
-  const handleResize = useCallback(() => {
-    setIsMobile(window.innerWidth < 768)
-  }, [])
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [handleResize])
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -69,27 +62,27 @@ const Carousel: React.FC<VideoCarouselProps> = ({ articles }) => {
                   transition={{ duration: 0.7, ease: "easeInOut" }}
               >
                 <div className="relative w-full h-full group">
+                  <div
+                      className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-80"/>
+
                   <img
                       alt={article.title}
                       src={article.img.src || "/placeholder.svg"}
                       className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
-                  <div
-                      className={`absolute max-w-96 bg-black/10 sm:bg-transparent backdrop-blur sm:backdrop-blur-none bottom-0 left-0 right-0 p-6 text-white transform ${
-                          isMobile ? "" : "translate-y-full group-hover:translate-y-0"
-                      } transition-transform duration-300 ease-in-out`}
-                  >
+                  <div className={`absolute max-w-96   bottom-0 left-0 right-0 p-6 text-white transform`}>
                     <span className="text-3xl font-bold">{article.title}</span>
-                    <p className="text-sm opacity-80 mt-1 mb-4">{article.description}</p>
+                    <p className="text-sm opacity-80 line-clamp-15 mt-1 mb-4">{article.description}</p>
                     <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={{scale: 1.05}}
+                        whileTap={{scale: 0.95}}
                         className="relative group flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm border border-white/10 text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-white/20 hover:border-white/20"
                     >
                       Read More
-                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      <div className="absolute inset-0 rounded-full bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"/>
+                      <div
+                          className="absolute inset-0 rounded-full bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </motion.button>
                   </div>
                 </div>

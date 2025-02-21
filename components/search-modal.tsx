@@ -4,10 +4,10 @@ import React, { useState } from "react"
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons"
 import { Button } from "@/components/ui/button"
 import {Dialog, DialogContent, DialogTitle, DialogTrigger} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
+
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Badge } from "@/components/ui/badge"
-import {motion} from "framer-motion";
+import {motion} from "motion/react";
 
 // Mock search results
 const searchResults = [

@@ -1,7 +1,7 @@
 "use client"
 
 import {useState, useEffect} from 'react'
-import {m, AnimatePresence} from 'framer-motion'
+import {motion, AnimatePresence} from 'motion/react'
 import {X} from 'lucide-react'
 
 interface ToastProps {
@@ -27,7 +27,7 @@ export default function Toast({show, message, onClose}: ToastProps) {
     return (
         <AnimatePresence>
             {isVisible && (
-                <m.div
+                <motion.div
                     initial={{opacity: 0, y: 50, scale: 0.3}}
                     animate={{opacity: 1, y: 0, scale: 1}}
                     exit={{opacity: 0, y: 20, scale: 0.5}}
@@ -48,14 +48,14 @@ export default function Toast({show, message, onClose}: ToastProps) {
                                 <X size={20}/>
                             </button>
                         </div>
-                        <m.div
+                        <motion.div
                             initial={{width: "100%"}}
                             animate={{width: "0%"}}
                             transition={{duration: 5, ease: "linear"}}
                             className="h-1 bg-white"
                         />
                     </div>
-                </m.div>
+                </motion.div>
             )}
         </AnimatePresence>
     )
