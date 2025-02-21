@@ -32,7 +32,7 @@ export default function RootLayout({
       <ThemeProvider
           attribute="class"
 
-          defaultTheme='ligth'
+          defaultTheme='dark'
           enableSystem
           disableTransitionOnChange
       >
