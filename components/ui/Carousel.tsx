@@ -37,7 +37,7 @@ const Carousel: React.FC<VideoCarouselProps> = ({ articles }) => {
           {articles.map((article, index) => (
               <motion.div
                   key={article.id}
-                  className={`absolute w-[80%] h-[70%] bg-black bg-opacity-60 rounded-2xl shadow-xl shadow-black flex items-center justify-center overflow-hidden
+                  className={`absolute w-[90%] h-[70%] bg-black bg-opacity-60 rounded-2xl shadow-xl shadow-black flex items-center justify-center overflow-hidden
                         ${index === currentIndex ? "z-20" : "z-10"} 
                         ${index === (currentIndex + 1) % articles.length ? "z-0" : ""} 
                         ${index === (currentIndex - 1 + articles.length) % articles.length ? "z-0" : ""}`}
@@ -77,12 +77,11 @@ const Carousel: React.FC<VideoCarouselProps> = ({ articles }) => {
                     <motion.button
                         whileHover={{scale: 1.05}}
                         whileTap={{scale: 0.95}}
-                        className="relative group flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm border border-white/10 text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-white/20 hover:border-white/20"
+                        className="relative group flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-white/20 to-white/10 border border-white/10 text-white font-medium transition-all duration-300  hover:border-white/20"
                     >
                       Read More
                       <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"/>
-                      <div
-                          className="absolute inset-0 rounded-full bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
                     </motion.button>
                   </div>
                 </div>

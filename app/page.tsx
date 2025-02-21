@@ -6,7 +6,7 @@ import img1 from "@/app/assets/img1.jpg"
 import img2 from "@/app/assets/img2.png"
 import img3 from "@/app/assets/img3.png"
 import img4 from "@/app/assets/img4.png"
-import AbstractBackground from "@/components/ui/abstract-background";
+
 
 const paragraph= 'House of Ideas E-Journal, a website run by Secretariat Department, sharing articles on science, e-commerce & finance, and many many more, adding a voice to the club and its community.'
 
@@ -131,14 +131,3 @@ export default  function Home() {
       </>
   );
 }
-/*
-*
-* <motion.span
-                         initial={{opacity:0}}
-                         animate={{
-                         opacity: 1,
-                     }}
-                         transition={{duration: 1, delay: 1.5}}>
-
-                    </motion.span>
-* */
