@@ -77,7 +77,15 @@ export default function Hero() {
                         ))}
                     </motion.div>
                 </div>
-                <motion.div className="flex flex-col justify-center items-center w-full min-h-screen xl:w-[40%]">
+                <motion.div
+                    initial={{
+                        x:550
+                    }}
+                    animate={{
+                        x: 0,
+                    }}
+                    transition={{duration: 1, delay: 1.5}}
+                    className="flex flex-col justify-center items-center w-full min-h-screen xl:w-[40%]">
                     <Carousel articles={articles}/>
                 </motion.div>
             </div>
