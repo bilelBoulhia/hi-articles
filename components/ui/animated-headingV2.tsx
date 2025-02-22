@@ -67,11 +67,8 @@ const WordTransform: React.FC<WordTransformProps> = ({
     return (
         <div
 
-            style={{
-                fontFamily: '"Liberation Mono"'
-            }}
 
-            className={cn(className, "whitespace-nowrap")}>
+            className={cn(className, "whitespace-nowrap font-bold")}>
 
             {letterPairs.map((pair, index) => (
 

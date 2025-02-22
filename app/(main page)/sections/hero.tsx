@@ -80,10 +80,9 @@ export  default function Hero(){
                     animate={{opacity: 1}}
                     transition={{duration: 1, delay: 2}}
                     style={{
-                        fontFamily: '"Liberation Mono"',
                         perspective: "1000px",
                     }}
-                    className="text-xl font-medium font-mono text-left "
+                    className="text-xl font-medium  text-left "
                 >
                     {paragraph.split(",").map((sentence, index) => (
                         <motion.span

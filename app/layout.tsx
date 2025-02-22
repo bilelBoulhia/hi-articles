@@ -1,9 +1,10 @@
-import { Geist } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Footer from "@/app/sections/Footer";
 import Header from "@/app/sections/Header";
 import AbstractBackground from "@/components/ui/abstract-background";
+import { Analytics } from "@vercel/analytics/react"
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -15,10 +16,9 @@ export const metadata = {
   description: "The fastest way to build apps with Next.js and Supabase",
 };
 
-const geistSans = Geist({
-  display: "swap",
-  subsets: ["latin"],
-});
+const Spacemono = Space_Mono(
+    {weight:'400',style:'normal',subsets:['latin']}
+);
 
 export default function RootLayout({
   children,
@@ -26,7 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={geistSans.className} suppressHydrationWarning>
+    <html lang="en" className={Spacemono.className} suppressHydrationWarning>
+      <Analytics/>
       <body className="bg-background text-foreground">
       <AbstractBackground/>
       <ThemeProvider
