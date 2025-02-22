@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en" className={Spacemono.className} suppressHydrationWarning>
       <Analytics/>
       <body className="bg-background text-foreground">
-      <AbstractBackground/>
+
       <ThemeProvider
           attribute="class"
 
