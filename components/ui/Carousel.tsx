@@ -29,7 +29,7 @@ const Carousel: React.FC<VideoCarouselProps> = ({ articles }) => {
     }, [articles.length])
 
     return (
-        <div className="relative w-full h-[50rem] rounded-lg flex items-center justify-center overflow-hidden">
+        <div className="relative w-full  h-[35rem] lg:h-[50rem] rounded-lg flex items-center justify-center overflow-hidden">
             <AnimatePresence mode="wait">
                 {articles.map(
                     (article, index) =>
