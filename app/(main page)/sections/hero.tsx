@@ -5,6 +5,7 @@ import img4 from "@/app/assets/img4.webp";
 import WordTransform from "@/components/ui/animated-headingV2";
 import { motion } from "motion/react";
 import Carousel from "@/components/ui/Carousel";
+import ThickWordTransform from "@/components/ThickWordTransform";
 
 const paragraph= 'House of Ideas E-Journal, a website run by Secretariat Department, sharing articles on science, e-commerce & finance, and many many more, adding a voice to the club and its community.'
 
@@ -60,19 +61,36 @@ export  default function Hero(){
             <div
                 className='relative flex-col gap-[1rem] text-5xl [@media(min-width:450px)]:text-7xl sm:text-8xl min-h-screen xl:min-h-full  justify-center items-start flex w-full xl:w-[60%]'>
 
+
                 <motion.span
                     initial={{x: "-150%"}}
                     animate={{x: "0%"}}
                     transition={{duration: 1, delay: 1.5}}
-                    className='bg-clip-text font-bold text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500'>
-                    HOUSE OF IDEAS
+                    className="relative inline-block ">
+
+                    <span
+                        className="absolute top-0 left-0 bg-clip-text font-bold text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500"
+                        style={{transform: "translate(0.5px, 0.5px)"}}>
+                        HOUSE OF IDEAS
+                    </span>
+                    <span
+                        className="absolute top-0 left-0  bg-clip-text font-bold text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500"
+                        style={{transform: "translate(-0.5px, -0.5px)"}}>
+                        HOUSE OF IDEAS
+                    </span>
+
+                    <span
+                        className="relative bg-clip-text font-bold text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 ">
+                        HOUSE OF IDEAS
+                    </span>
                 </motion.span>
 
-                <span className='text-center font-[1000]  '>
-                  <WordTransform
 
+                <span className='text-center' style={{fontWeight: 1000}}>
+                  <ThickWordTransform
                       initialWord="WELCOME TO "
                       transformedWord="E-JOURNAL"/>
+
               </span>
 
                 <motion.div
