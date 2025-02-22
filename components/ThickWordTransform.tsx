@@ -20,7 +20,7 @@ const ThickWordTransform: React.FC<ThickWordTransformProps> = ({
                 <WordTransform initialWord={initialWord} transformedWord={transformedWord} />
             </div>
 
-            <div className="absolute top-[1px] left-[1px]">
+            <div className="absolute top-[0.25px] left-[0.25px]">
                 <WordTransform initialWord={initialWord} transformedWord={transformedWord} />
             </div>
 

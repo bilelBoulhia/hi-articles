@@ -69,13 +69,15 @@ export  default function Hero(){
                     className="relative inline-block ">
 
                     <span
+
                         className="absolute top-0 left-0 bg-clip-text font-bold text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500"
-                        style={{transform: "translate(0.5px, 0.5px)"}}>
+                        style={{transform: "translate(0.25px, 0.25px)"}}>
                         HOUSE OF IDEAS
                     </span>
                     <span
+
                         className="absolute top-0 left-0  bg-clip-text font-bold text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500"
-                        style={{transform: "translate(-0.5px, -0.5px)"}}>
+                        style={{transform: "translate(-0.25px, -0.25px)"}}>
                         HOUSE OF IDEAS
                     </span>
 
