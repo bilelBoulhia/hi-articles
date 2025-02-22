@@ -1,7 +1,7 @@
-import img2 from "@/app/assets/img2.png";
-import img1 from "@/app/assets/img1.jpg";
-import img3 from "@/app/assets/img3.png";
-import img4 from "@/app/assets/img4.png";
+import img2 from "@/app/assets/img2.webp";
+import img1 from "@/app/assets/img1.webp";
+import img3 from "@/app/assets/img3.webp";
+import img4 from "@/app/assets/img4.webp";
 import WordTransform from "@/components/ui/animated-headingV2";
 import { motion } from "motion/react";
 import Carousel from "@/components/ui/Carousel";
