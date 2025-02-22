@@ -68,9 +68,9 @@ export  default function Hero(){
                     HOUSE OF IDEAS
                 </motion.span>
 
-                <span className='text-center'>
+                <span className='text-center font-[1000]  '>
                   <WordTransform
-                      className="font-bold "
+
                       initialWord="WELCOME TO "
                       transformedWord="E-JOURNAL"/>
               </span>

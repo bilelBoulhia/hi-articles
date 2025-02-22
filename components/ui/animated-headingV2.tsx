@@ -66,9 +66,7 @@ const WordTransform: React.FC<WordTransformProps> = ({
 
     return (
         <div
-
-
-            className={cn(className, "whitespace-nowrap font-bold")}>
+            className={cn(className, "whitespace-nowrap ")}>
 
             {letterPairs.map((pair, index) => (
 
