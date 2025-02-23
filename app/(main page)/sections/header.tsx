@@ -11,7 +11,7 @@ export default function Header() {
                 </div>
                 <div className="flex items-center gap-4">
                     <Link href='https://www.houseofideas.club'>
-                        <Button variant="ghost"  className="text-sm">
+                        <Button variant="ghost"  className="text-sm hover:bg-transparent focus:text-white">
                             our website
                         </Button>
                     </Link>

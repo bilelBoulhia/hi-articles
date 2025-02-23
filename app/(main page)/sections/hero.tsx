@@ -110,7 +110,7 @@ export default function Hero() {
                     </section>
                     <section className="snap-start">
                         <motion.div className="flex flex-col justify-center items-center w-full min-h-screen">
-                            <div className="relative text-center max-w-2xl w-full  overflow-hidden">
+                            <div className="relative text-center max-w-2xl w-full mt-16  overflow-hidden">
                                 <motion.span
                                     className="inline-block mx-1 "
                                     initial={{opacity: 0, x: -10}}

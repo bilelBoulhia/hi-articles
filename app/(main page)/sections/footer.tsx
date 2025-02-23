@@ -39,7 +39,7 @@ export default function Footer() {
     }
 
     return (
-        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden ">
+        <div className="relative min-h-screen w-full flex p-0 items-center justify-center overflow-hidden ">
 
 
 
@@ -48,11 +48,11 @@ export default function Footer() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true}}
-                className="relative w-full max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-2 gap-16"
+                className="relative w-full max-w-7xl mx-auto px-4 py-2 grid grid-cols-1 lg:grid-cols-2 gap-1"
             >
 
                 <motion.div variants={itemVariants} className="space-y-12">
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         <h2 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
                             Let's Connect
                         </h2>
@@ -105,10 +105,10 @@ export default function Footer() {
 
                 </motion.div>
 
-                <motion.div variants={itemVariants} className="space-y-12">
+                <motion.div variants={itemVariants} className="space-y-4 mt-2 [@media(min-height:730px)]:mt-9">
 
 
-                    <div className="space-y-6">
+                    <div className="space-y-2">
                         <h3 className="text-2xl font-semibold dark:text-white">Follow Us</h3>
                         <div className="flex space-x-6">
                             <Link

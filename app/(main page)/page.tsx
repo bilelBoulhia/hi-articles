@@ -22,7 +22,7 @@ export default function Home() {
             <section className='snap-start  w-full min-h-screen'>
                 <CoolNewsletter/>
             </section>
-            <section className='snap-start  w-full min-h-screen'>
+            <section className='snap-start  w-full min-h-screen '>
                 <Footer/>
             </section>
 
