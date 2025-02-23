@@ -45,7 +45,7 @@ export default function CoolNewsletter() {
                     <div className="px-6  py-12 sm:px-12 sm:py-16 lg:flex lg:items-center lg:p-20">
                         <div className="lg:w-0 lg:flex-1">
                             <motion.h2
-                                initial={{x:'-110%'}}
+                                initial={{x:'-104%'}}
                                 whileInView={{x:0}}
                                 viewport={{once: true}}
                                 transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}

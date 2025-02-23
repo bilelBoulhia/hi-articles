@@ -41,11 +41,7 @@ export default function Footer() {
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden ">
 
-            <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"/>
-            <div className="absolute top-0 -right-4 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"/>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"/>
 
-            <div className="absolute inset-0 bg-grid-white/[0.02] [mask-image:radial-gradient(white,transparent_85%)]"/>
 
             <motion.div
                 variants={containerVariants}
@@ -54,13 +50,13 @@ export default function Footer() {
                 viewport={{once: true}}
                 className="relative w-full max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-2 gap-16"
             >
-                {/* Left Section */}
+
                 <motion.div variants={itemVariants} className="space-y-12">
                     <div className="space-y-6">
                         <h2 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
                             Let's Connect
                         </h2>
-                        <div className="text-gray-400 max-w-md">
+                        <div className="dark:text-gray-400 text-gray-600 max-w-md">
                             <DescriptionFliper paragraph={paragraph}/>
                         </div>
                     </div>
@@ -72,8 +68,8 @@ export default function Footer() {
                                 <Mail className="h-5 w-5 text-white"/>
                             </div>
                             <div>
-                                <p className="text-gray-400">Email us at</p>
-                                <p className="text-white">hoi.univalger3@gmail.com</p>
+                                <p className="dark:text-gray-400 text-gray-600">Email us at</p>
+                                <p className="dark:text-white">hoi.univalger3@gmail.com</p>
                             </div>
                         </motion.div>
 
@@ -83,9 +79,9 @@ export default function Footer() {
                                 <Phone className="h-5 w-5 text-white"/>
                             </div>
                             <div>
-                                <p className="text-gray-400">Call us at</p>
-                                <p className="text-white">+213 796 66 43 83</p>
-                                <p className="text-white">+213 552 55 33 24</p>
+                                <p className="dark:text-gray-400 text-gray-600">Call us at</p>
+                                <p className="dark:text-white">+213 796 66 43 83</p>
+                                <p className="dark:text-white">+213 552 55 33 24</p>
                             </div>
                         </motion.div>
 
@@ -95,10 +91,10 @@ export default function Footer() {
                                 <MapPin className="h-5 w-5 text-white"/>
                             </div>
                             <div>
-                                <p className="text-gray-400">Find us at</p>
+                                <p className="dark:text-gray-400 text-gray-600">Find us at</p>
                                 <Link
                                     href="https://www.univ-alger3.dz/en/"
-                                    className="text-white hover:text-purple-400 transition-colors"
+                                    className="dark:text-white hover:text-purple-400 transition-colors"
                                 >
                                     University of Algiers 3
                                 </Link>
@@ -113,38 +109,39 @@ export default function Footer() {
 
 
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold text-white">Follow Us</h3>
+                        <h3 className="text-2xl font-semibold dark:text-white">Follow Us</h3>
                         <div className="flex space-x-6">
                             <Link
                                 href="https://www.instagram.com/hi.club.alger3/"
                                 className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors group"
                             >
                                 <Instagram
-                                    className="h-5 w-5 text-gray-400 group-hover:text-purple-400 transition-colors"/>
+                                    className="h-5 w-5 text-gray-400 transition-colors"/>
                             </Link>
 
                             <Link
                                 href="https://www.facebook.com/profile.php?id=61552555332858"
-                                className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors group"
+                                className="h-12 w-12 rounded-full bg-white/5  flex items-center justify-center hover:bg-white/10 transition-colors group"
                             >
                                 <FacebookIcon
-                                    className="h-5 w-5 text-gray-400 group-hover:text-purple-400 transition-colors"/>
+                                    className="h-5 w-5 dark:text-white   transition-colors"/>
                             </Link>
 
                             <Link
                                 href="https://www.tiktok.com/@clubhouseofideas"
-                                className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors group"
+                                className="h-12 w-12 rounded-full bg-white/5  flex items-center justify-center hover:bg-white/10 transition-colors group"
                             >
                                 <Tiktok
-                                    className="h-5 w-5 text-gray-400 group-hover:text-purple-400 transition-colors"/>
+
+                                    className="h-5 w-5 text-white  transition-colors"/>
                             </Link>
 
                             <Link
                                 href="https://www.linkedin.com/company/house-of-ideas-club"
-                                className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors group"
+                                className="h-12 w-12 rounded-full bg-white/5  flex items-center justify-center hover:bg-white/10 transition-colors group"
                             >
                                 <LinkedInIcon
-                                    className="h-5 w-5 text-gray-400 group-hover:text-purple-400 transition-colors"/>
+                                    className="h-5 w-5 dark:text-white   transition-colors"/>
                             </Link>
                         </div>
                     </div>

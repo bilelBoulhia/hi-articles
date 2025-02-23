@@ -5,7 +5,6 @@ import img4 from "@/app/assets/img4.webp";
 import { motion } from "motion/react";
 import Carousel from "@/components/ui/Carousel";
 import ThickWordTransform from "@/components/ThickWordTransform";
-import AbstractBackground from "@/components/ui/abstract-background";
 import DescriptionFliper from "@/components/ui/Description-Fliper";
 
 const paragraph = `House of Ideas E-Journal, a website run by Secretariat Department, 
@@ -87,7 +86,7 @@ export default function Hero() {
                 </motion.div>
             </div>
             <div className="flex lg:hidden flex-col px-4 ">
-                <AbstractBackground/>
+
                 <div className="overflow-y-scroll snap-y snap-mandatory h-screen">
                     <section className="snap-start">
                         <div
