@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import Carousel from "@/components/ui/Carousel";
 import ThickWordTransform from "@/components/ThickWordTransform";
 import AbstractBackground from "@/components/ui/abstract-background";
+import DescriptionFliper from "@/components/ui/Description-Fliper";
 
 const paragraph = `House of Ideas E-Journal, a website run by Secretariat Department, 
 sharing articles on science, e-commerce & finance, and many more, adding a voice to the club and its community.`;
@@ -46,9 +47,15 @@ const articles = [
 export default function Hero() {
     return (
         <>
-
+            <style>
+                {`
+                .overflow-y-scroll::-webkit-scrollbar {
+                display: none;
+                }`}
+            </style>
+            {/*desktop*/}
             <div className="hidden lg:flex justify-center items-center lg:flex-row w-full relative px-4">
-                <AbstractBackground/>
+
                 <div
                     className="relative flex-col gap-[1rem] text-5xl [@media(min-width:450px)]:text-7xl sm:text-8xl min-h-screen lg:min-h-full justify-center items-start flex w-full xl:w-[60%]">
                     <motion.span initial={{x: "-150%"}} animate={{x: "0%"}} transition={{duration: 1, delay: 1.5}}
@@ -65,21 +72,11 @@ export default function Hero() {
                     <span className="text-center" style={{fontWeight: 1000}}>
                         <ThickWordTransform initialWord="WELCOME TO " transformedWord="E-JOURNAL"/>
                     </span>
-                    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, delay: 2}}
-                                className="text-xl font-medium text-left">
-                        {paragraph.split(",").map((sentence, index) => (
-                            <motion.span key={index} className="inline-block mr-2"
-                                         initial={{opacity: 0, y: 40, scale: 0.98}}
-                                         animate={{opacity: 1, y: 0, scale: 1}}
-                                         transition={{duration: 0.8, delay: index * 0.5 * 0.8}}>
-                                {sentence.trim()}{index !== paragraph.split(",").length - 1 ? "," : ""}
-                            </motion.span>
-                        ))}
-                    </motion.div>
+                    <DescriptionFliper paragraph={paragraph}/>
                 </div>
                 <motion.div
                     initial={{
-                        x:550
+                        x: 650
                     }}
                     animate={{
                         x: 0,
@@ -89,17 +86,7 @@ export default function Hero() {
                     <Carousel articles={articles}/>
                 </motion.div>
             </div>
-            <style>
-                {`
-                .overflow-y-scroll::-webkit-scrollbar {
-                display: none;
-                }`}
-            </style>
-
-            <div
-
-
-                className="flex lg:hidden flex-col px-4 ">
+            <div className="flex lg:hidden flex-col px-4 ">
                 <AbstractBackground/>
                 <div className="overflow-y-scroll snap-y snap-mandatory h-screen">
                     <section className="snap-start">
@@ -119,17 +106,7 @@ export default function Hero() {
                             <span className="text-center" style={{fontWeight: 1000}}>
                                 <ThickWordTransform initialWord="WELCOME TO " transformedWord="E-JOURNAL"/>
                             </span>
-                            <motion.div initial={{opacity: 0}} animate={{opacity: 1}}
-                                        transition={{duration: 1, delay: 2}} className="text-xl font-medium text-left">
-                                {paragraph.split(",").map((sentence, index) => (
-                                    <motion.span key={index} className="inline-block mr-2"
-                                                 initial={{opacity: 0, y: 40, scale: 0.98}}
-                                                 animate={{opacity: 1, y: 0, scale: 1}}
-                                                 transition={{duration: 0.8, delay: index * 0.5 * 0.8}}>
-                                        {sentence.trim()}{index !== paragraph.split(",").length - 1 ? "," : ""}
-                                    </motion.span>
-                                ))}
-                            </motion.div>
+                            <DescriptionFliper paragraph={paragraph}/>
                         </div>
                     </section>
                     <section className="snap-start">

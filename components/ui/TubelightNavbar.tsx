@@ -20,7 +20,7 @@ function TubeLightNavbar() {
   const tabs = [
     { name: 'home', url: '#', icon: <GoHomeFill className='h-auto w-[1rem]' /> },
     { name: 'articles', url: '#', icon: <GrArticle className='h-auto w-[1rem]' /> },
-    { name: 'topics', url: '#', icon: <BiCategory className='h-auto w-[1rem]' /> },
+    { name: 'categories', url: '#', icon: <BiCategory className='h-auto w-[1rem]' /> },
     { name: 'website', url: '#', icon: <CgWebsite className='h-auto w-[1rem]' /> }
   ];
 

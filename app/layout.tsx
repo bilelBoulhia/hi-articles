@@ -1,8 +1,8 @@
 import { Space_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-import Footer from "@/app/sections/Footer";
-import Header from "@/app/sections/Header";
+import Footer from "@/app/articles/sections/Footer";
+import Header from "@/app/articles/sections/Header";
 import AbstractBackground from "@/components/ui/abstract-background";
 import { Analytics } from "@vercel/analytics/react"
 
@@ -29,7 +29,6 @@ export default function RootLayout({
     <html lang="en" className={Spacemono.className} suppressHydrationWarning>
       <Analytics/>
       <body className="bg-background text-foreground">
-
       <ThemeProvider
           attribute="class"
 
@@ -37,14 +36,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
       >
-
-          <Header/>
-
           <main className="min-h-[100dvh] overflow-x-hidden flex flex-col  z-0 items-center">
               {children}
           </main>
-          <Footer/>
-
       </ThemeProvider>
       </body>
     </html>
