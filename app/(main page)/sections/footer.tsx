@@ -50,7 +50,7 @@ export default function Footer() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true}}
-                className="relative w-[50%]  px-2 py-2 grid grid-cols-1  gap-1"
+                className="relative px-4  [@media(min-width:850px)]:w-[50%] w-full py-2 grid grid-cols-1  gap-1"
             >
 
                 <motion.div variants={itemVariants} className="space-y-12">
