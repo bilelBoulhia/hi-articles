@@ -31,7 +31,7 @@ export default function CategorySection() {
 const pargraph= 'check out and expansion of unique, interesting, genre of articles'
   return (
 
-        <div className="min-h-screen mt-12  flex items-center w-full  justify-center relative overflow-hidden">
+        <div className="min-h-screen  flex items-center w-full  justify-center relative overflow-hidden">
           <div className="flex flex-col lg:flex-row">
 
             <div className="lg:w-[50%] p-8  flex flex-col justify-center relative">
@@ -47,7 +47,7 @@ const pargraph= 'check out and expansion of unique, interesting, genre of articl
                     viewport={{once: true}}
                     transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
 
-                    className="text-3xl sm:text-4xl py-3  lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500  text-transparent bg-clip-text">
+                    className="text-4xl sm:text-6xl  py-3  lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500  text-transparent bg-clip-text">
                   Explore our categories
                 </motion.h2>
                <DescriptionFliper paragraph={pargraph} className='dark:text-xl mb-8 text-lg'/>

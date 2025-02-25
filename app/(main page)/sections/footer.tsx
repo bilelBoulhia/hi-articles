@@ -10,6 +10,9 @@ import {
 import Link from "next/link"
 import DescriptionFliper from "@/components/ui/Description-Fliper";
 import {FacebookIcon,Instagram,LinkedInIcon, Tiktok} from "@/components/ui/Icons";
+import {FacebookEmbed} from "react-social-media-embed";
+import InstagramProfile from "@/components/ui/instagram-profile";
+
 
 
 const paragraph : string = 'Join our community and Improve your skills ideas, business, and creative thinking.'
@@ -39,8 +42,7 @@ export default function Footer() {
     }
 
     return (
-        <div className="relative min-h-screen w-full flex p-0 items-center justify-center overflow-hidden ">
-
+        <div className="relative min-h-screen w-full  flex  flex-row p-0 items-center justify-center overflow-hidden ">
 
 
             <motion.div
@@ -48,14 +50,14 @@ export default function Footer() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true}}
-                className="relative w-full max-w-7xl mx-auto px-4 py-2 grid grid-cols-1 lg:grid-cols-2 gap-1"
+                className="relative w-[50%]  px-2 py-2 grid grid-cols-1  gap-1"
             >
 
                 <motion.div variants={itemVariants} className="space-y-12">
                     <div className="space-y-4">
                         <motion.h2
-                            initial={{x:'-104%'}}
-                            whileInView={{x:0}}
+                            initial={{x: '-80%'}}
+                            whileInView={{x: 0}}
                             viewport={{once: true}}
                             transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
 
@@ -112,14 +114,12 @@ export default function Footer() {
                 </motion.div>
 
                 <motion.div variants={itemVariants} className="space-y-4 mt-2 [@media(min-height:730px)]:mt-9">
-
-
                     <div className="space-y-2">
                         <h3 className="text-2xl font-bold font-sans dark:text-white">Follow Us</h3>
-                        <div className="flex space-x-6">
+                        <div className="flex  space-x-6">
                             <Link
                                 href="https://www.instagram.com/hi.club.alger3/"
-                                className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors group"
+                                className="h-12 w-12  [@media(min-width:850px)]:hidden rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors group"
                             >
                                 <Instagram
                                     className="h-5 w-5 text-gray-400 transition-colors"/>
@@ -155,9 +155,19 @@ export default function Footer() {
 
 
             </motion.div>
+
+
+            <div className='mt-8 p-5 hidden [@media(min-width:850px)]:flex'>
+                <Link href={'https://www.instagram.com/houseofideas.club'}>
+                    <InstagramProfile/>
+                </Link>
+
+
+            </div>
+
             <motion.div
                 variants={itemVariants}
-                className="absolute bottom-2 left-0 right-0 text-center text-sm text-gray-400"
+                className="absolute bottom-2  left-0 right-0 text-center text-sm text-gray-400"
             >
 
                 <p className="mt-1">

@@ -59,7 +59,7 @@ export default function Hero() {
                 <div
                     className="relative flex-col gap-[1rem] text-5xl [@media(min-width:450px)]:text-7xl sm:text-8xl min-h-screen lg:min-h-full justify-center items-start flex w-full xl:w-[60%]">
                     <motion.span
-                        initial={{x: "-150%"}}
+                        initial={{x: "-110%"}}
                         animate={{x: "0%"}}
                         transition={{duration: 0.75, delay: 1}}
                                  className="relative inline-block">
@@ -85,7 +85,7 @@ export default function Hero() {
                         x: 0,
                     }}
                     transition={{duration: 0.75, delay: 1}}
-                    className="flex flex-col justify-center items-center w-full min-h-screen xl:w-[40%]">
+                    className="flex flex-col justify-center items-center w-full  min-h-screen xl:w-[40%]">
                     <Carousel articles={articles}/>
                 </motion.div>
             </div>
