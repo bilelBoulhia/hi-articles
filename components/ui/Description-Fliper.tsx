@@ -9,7 +9,7 @@ interface Props {
 const DescriptionFliper =({className,paragraph}:Props)=>{
     return (
         <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, delay: 2}}
-                    className={cn(className,"text-xl font-medium text-left")}>
+                    className={cn(className,"font-medium text-left")}>
             {paragraph.split(",").map((sentence, index) => (
                 <motion.span key={index} className="inline-block mr-2"
                              initial={{opacity: 0, y: 40, scale: 0.98}}

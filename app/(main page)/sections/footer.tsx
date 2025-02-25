@@ -53,11 +53,17 @@ export default function Footer() {
 
                 <motion.div variants={itemVariants} className="space-y-12">
                     <div className="space-y-4">
-                        <h2 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
+                        <motion.h2
+                            initial={{x:'-104%'}}
+                            whileInView={{x:0}}
+                            viewport={{once: true}}
+                            transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
+
+                            className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
                             Let's Connect
-                        </h2>
-                        <div className="dark:text-gray-400 text-gray-600 max-w-md">
-                            <DescriptionFliper paragraph={paragraph}/>
+                        </motion.h2>
+                        <div className="dark:text-white max-w-md">
+                            <DescriptionFliper className='text-xl' paragraph={paragraph}/>
                         </div>
                     </div>
 
@@ -109,7 +115,7 @@ export default function Footer() {
 
 
                     <div className="space-y-2">
-                        <h3 className="text-2xl font-semibold dark:text-white">Follow Us</h3>
+                        <h3 className="text-2xl font-bold font-sans dark:text-white">Follow Us</h3>
                         <div className="flex space-x-6">
                             <Link
                                 href="https://www.instagram.com/hi.club.alger3/"

@@ -4,6 +4,7 @@ import CoolNewsletter from "@/app/(main page)/sections/newsletter";
 import Footer from "@/app/(main page)/sections/footer";
 import AbstractBackground from "@/components/ui/abstract-background";
 import Header from "@/app/(main page)/sections/header";
+import CategorySection from "@/app/(main page)/sections/category-section";
 
 export default function Home() {
     return (
@@ -18,6 +19,9 @@ export default function Home() {
             </style>
             <section className='snap-start w-full min-h-screen'>
                 <Hero/>
+            </section>
+            <section className='snap-start w-full min-h-screen'>
+             <CategorySection/>
             </section>
             <section className='snap-start  w-full min-h-screen'>
                 <CoolNewsletter/>

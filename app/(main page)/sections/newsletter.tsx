@@ -49,11 +49,11 @@ export default function CoolNewsletter() {
                                 whileInView={{x:0}}
                                 viewport={{once: true}}
                                 transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
-                                className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                                className=" text-2xl md:text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                                 Get notifactions about new articles
                             </motion.h2>
-                            <div className="mt-4 max-w-3xl text-lg text-purple-100">
-                               <DescriptionFliper paragraph={paragraph}/>
+                            <div className="mt-4 max-w-3xl  text-purple-100">
+                               <DescriptionFliper className=' md:text-xl' paragraph={paragraph}/>
                             </div>
                         </div>
                         <div className="mt-12 sm:w-full sm:max-w-md lg:mt-0 lg:ml-8 lg:flex-1">
