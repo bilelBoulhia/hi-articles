@@ -5,6 +5,9 @@ import Footer from "@/app/(main page)/sections/footer";
 import AbstractBackground from "@/components/ui/abstract-background";
 import Header from "@/app/(main page)/sections/header";
 import CategorySection from "@/app/(main page)/sections/category-section";
+import FacultyNewsSection from "@/app/(main page)/sections/faculty-news-section";
+
+
 
 export default function Home() {
     return (
@@ -21,7 +24,10 @@ export default function Home() {
                 <Hero/>
             </section>
             <section className='snap-start w-full min-h-screen'>
-             <CategorySection/>
+                <CategorySection/>
+            </section>
+            <section className='snap-start w-full min-h-screen'>
+                <FacultyNewsSection/>
             </section>
             <section className='snap-start  w-full min-h-screen'>
                 <CoolNewsletter/>

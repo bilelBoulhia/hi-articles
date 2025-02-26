@@ -28,7 +28,7 @@ const LetterPair: React.FC<LetterPairProps> = ({
                     initial={{ height: "auto" }}
                     animate={{ height: 0 }}
                     exit={{ height: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 + delay / 2000 }} // Added 3s delay
+                    transition={{ duration: 0.5, delay: 0.5 + delay / 1500 }}
                     className="absolute overflow-hidden left-0 top-0"
                 >
                     {initialLetter}
@@ -39,7 +39,7 @@ const LetterPair: React.FC<LetterPairProps> = ({
                     initial={{ height: 0 }}
                     animate={{ height: "auto" }}
                     exit={{ height: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 + delay / 2000 }} // Added 3s delay
+                    transition={{ duration: 0.5, delay: 1.25 + delay / 1500 }}
                     className="absolute overflow-hidden left-0 bottom-0"
                 >
                     {transformedLetter}
@@ -60,9 +60,7 @@ const WordTransform: React.FC<WordTransformProps> = ({
                                                          initialWord,
                                                          transformedWord,
                                                      }) => {
-    const letterPairs: Array<[string, string]> = initialWord
-        .split("")
-        .map((letter, index) => [letter, transformedWord[index]]);
+    const letterPairs: Array<[string, string]> = initialWord.split("").map((letter, index) => [letter, transformedWord[index]]);
 
     return (
         <div
@@ -74,7 +72,7 @@ const WordTransform: React.FC<WordTransformProps> = ({
                     key={index}
                     initialLetter={pair[0]}
                     transformedLetter={pair[1]}
-                    delay={index * 80}
+                    delay={index * 100}
                     index={index}
                 />
             ))}

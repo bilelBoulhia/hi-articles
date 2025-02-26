@@ -5,7 +5,7 @@ import {
 
     Mail,
     Phone,
-    MapPin,
+    MapPin, Users,
 } from "lucide-react"
 import Link from "next/link"
 import DescriptionFliper from "@/components/ui/Description-Fliper";
@@ -71,9 +71,8 @@ export default function Footer() {
 
                     <div className="space-y-8">
                         <motion.div variants={itemVariants} className="flex items-center space-x-4">
-                            <div
-                                className="h-10 w-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                                <Mail className="h-5 w-5 text-white"/>
+                            <div className="bg-purple-500/10 p-2 rounded-full mt-1">
+                                <Mail className="h-5 w-5 text-purple-400"/>
                             </div>
                             <div>
                                 <p className="dark:text-gray-400 text-gray-600">Email us at</p>
@@ -82,9 +81,8 @@ export default function Footer() {
                         </motion.div>
 
                         <motion.div variants={itemVariants} className="flex items-center space-x-4">
-                            <div
-                                className="h-10 w-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                                <Phone className="h-5 w-5 text-white"/>
+                            <div className="bg-purple-500/10 p-2 rounded-full mt-1">
+                                <Phone className="h-5 w-5 text-purple-400"/>
                             </div>
                             <div>
                                 <p className="dark:text-gray-400 text-gray-600">Call us at</p>
@@ -94,9 +92,8 @@ export default function Footer() {
                         </motion.div>
 
                         <motion.div variants={itemVariants} className="flex items-center space-x-4">
-                            <div
-                                className="h-10 w-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                                <MapPin className="h-5 w-5 text-white"/>
+                            <div className="bg-purple-500/10 p-2 rounded-full mt-1">
+                                <MapPin className="h-5 w-5 text-purple-400"/>
                             </div>
                             <div>
                                 <p className="dark:text-gray-400 text-gray-600">Find us at</p>
@@ -106,7 +103,9 @@ export default function Footer() {
                                 >
                                     University of Algiers 3
                                 </Link>
+
                             </div>
+
                         </motion.div>
                     </div>
 
@@ -117,13 +116,7 @@ export default function Footer() {
                     <div className="space-y-2">
                         <h3 className="text-2xl font-bold font-sans dark:text-white">Follow Us</h3>
                         <div className="flex  space-x-6">
-                            <Link
-                                href="https://www.instagram.com/hi.club.alger3/"
-                                className="h-12 w-12  [@media(min-width:850px)]:hidden rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors group"
-                            >
-                                <Instagram
-                                    className="h-5 w-5 text-gray-400 transition-colors"/>
-                            </Link>
+
 
                             <Link
                                 href="https://www.facebook.com/profile.php?id=61552555332858"
@@ -148,6 +141,14 @@ export default function Footer() {
                             >
                                 <LinkedInIcon
                                     className="h-5 w-5 dark:text-white   transition-colors"/>
+                            </Link>
+
+                            <Link
+                                href="https://www.instagram.com/hi.club.alger3/"
+                                className="h-12 w-12  [@media(min-width:850px)]:hidden rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors group"
+                            >
+                                <Instagram
+                                    className="h-5 w-5 text-gray-400 transition-colors"/>
                             </Link>
                         </div>
                     </div>

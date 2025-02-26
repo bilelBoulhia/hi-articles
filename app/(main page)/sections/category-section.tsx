@@ -1,31 +1,36 @@
 "use client"
 
 import { motion } from "motion/react"
-import { Atom, ShoppingCart, LineChart, ArrowRight} from "lucide-react"
+import {Atom, ShoppingCart, LineChart, ArrowRight, Briefcase, Newspaper,} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import DescriptionFliper from "@/components/ui/Description-Fliper";
 
 export default function CategorySection() {
   const categories = [
     {
-      title: "Science & Technology",
-      icon: Atom,
+      title: "Entrepreneurship",
+      icon: Briefcase,
       gradient: "from-[#4158D0] via-[#C850C0] to-[#FFCC70]",
-      description: "Explore the latest in tech innovation",
+
     },
     {
       title: "E-commerce & Business",
       icon: ShoppingCart,
       gradient: "from-[#0093E9] to-[#80D0C7]",
-      description: "Digital commerce insights",
+
     },
     {
       title: "Finance & Economics",
       icon: LineChart,
       gradient: "from-[#8EC5FC] to-[#E0C3FC]",
-      description: "Market trends & analysis",
-    },
 
+    },
+    {
+        title: "College News",
+          icon: Newspaper,
+          gradient: "from-[#fcdd8e] to-[#472fa3]"
+
+    },
 
   ]
 const pargraph= 'check out and expansion of unique, interesting, genre of articles'
@@ -63,16 +68,16 @@ const pargraph= 'check out and expansion of unique, interesting, genre of articl
             </div>
 
 
-            <div className="lg:w-[50%]  flex justify-center items-center  p-8 lg:p-16">
+            <div className="lg:w-[50%]  flex justify-center items-center">
               <div
-                  className="max-w-6xl mx-auto flex flex-col sm:flex-row lg:flex-wrap justify-around gap-2 sm:gap-3   ">
+                  className="max-w-6xl mx-auto flex flex-col sm:flex-row lg:flex-wrap xl:grid xl:grid-cols-2 justify-around gap-2 sm:gap-3   ">
                 {categories.map((category, index) => (
                     <motion.div
                         key={category.title}
                         initial={{opacity: 0, y: 20}}
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.6, delay: index * 0.1}}
-                        className="group w-full sm:w-auto"
+                        className="group w-full sm:max-w-[15rem]"
                     >
                       <div
                           className="relative bg-black/40 backdrop-blur-sm rounded-xl sm:rounded-2xl px-3 sm:p-6 h-[50px] sm:h-[200px] overflow-hidden border border-white/5 hover:border-purple-400/50 transition-all duration-500">
@@ -87,7 +92,7 @@ const pargraph= 'check out and expansion of unique, interesting, genre of articl
                           </div>
 
                           <div className="ml-3 sm:ml-0 sm:mt-auto">
-                            <h3 className="text-base sm:text-lg font-medium text-white mb-0 sm:mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                            <h3 className="font-medium text-white mb-0 sm:mb-2 group-hover:text-purple-400 transition-colors duration-300">
                               {category.title}
                             </h3>
                           </div>

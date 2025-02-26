@@ -33,7 +33,7 @@ const fillVariants = {
 
 export default function AbstractBackground() {
     return (
-        <div className="absolute inset-0  overflow-visible">
+        <div className="absolute inset-0   overflow-visible">
             <div
                 className="absolute inset-0 opacity-[0.15] dark:opacity-[0.07]"
                 style={{
