@@ -95,8 +95,8 @@ export default function FacultyNewsSection() {
                 </div>
 
                 <div className="px-4 w-full  flex   md:w-[50%] items-center justify-center  ">
-                    <div className="w-full ">
-                        <div className="grid md:mt-12  grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 relative">
+                    <div className="w-full  ">
+                        <div className="grid  md:mt-[6rem]  grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 relative">
                             {newsItems.map((item, index) => (
                                 <div
                                     key={item.id}
