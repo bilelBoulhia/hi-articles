@@ -89,13 +89,12 @@ export default function Hero() {
                     <Carousel articles={articles}/>
                 </motion.div>
             </div>
-            <div className="flex lg:hidden flex-col px-4 ">
 
-                {/*phone*/}
+            {/*phone*/}
+            <div className="flex lg:hidden flex-col px-4 ">
                 <div className="overflow-y-scroll snap-y snap-mandatory h-screen">
                     <section className="snap-start">
-                        <div
-                            className="relative flex-col gap-[1rem] text-5xl [@media(min-width:450px)]:text-7xl sm:text-8xl min-h-screen justify-center items-start flex w-full xl:w-[60%]">
+                        <div className="relative flex-col gap-[1rem] text-5xl [@media(min-width:450px)]:text-7xl sm:text-8xl min-h-screen justify-center items-start flex w-full xl:w-[60%]">
                             <motion.span initial={{x: "-150%"}} animate={{x: "0%"}}
                                          transition={{duration: 0.75, delay: 1}}
                                          className="relative inline-block">
@@ -115,7 +114,7 @@ export default function Hero() {
                         </div>
                     </section>
                     <section className="snap-start">
-                        <motion.div className="flex flex-col justify-center items-center w-full min-h-screen">
+                        <div className="flex flex-col justify-center items-center w-full min-h-screen">
                             <div className="relative text-center font-bold  max-w-2xl w-full mt-16  overflow-hidden">
                                 <motion.span
                                     className="inline-block mx-1 "
@@ -164,7 +163,7 @@ export default function Hero() {
                             </div>
 
                             <Carousel articles={articles}/>
-                        </motion.div>
+                        </div>
                     </section>
                 </div>
             </div>
