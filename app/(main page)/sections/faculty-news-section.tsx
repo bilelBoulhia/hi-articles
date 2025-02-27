@@ -8,6 +8,8 @@ import Image from "next/image"
 import m1 from "@/app/assets/dummynews/molt9a1.jpg"
 import m2 from "@/app/assets/dummynews/molt9a2.jpg"
 import m3 from "@/app/assets/dummynews/ham.jpg"
+import { motion } from "motion/react"
+import DescriptionFliper from "@/components/ui/Description-Fliper";
 
 const newsItems = [
     {
@@ -42,9 +44,15 @@ export default function FacultyNewsSection() {
                     <div className="space-y-6">
                         <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm font-mono">Faculty Updates</div>
 
-                        <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                            Faculty News
-                        </h2>
+                        <motion.h2
+                            initial={{x:'-100%'}}
+                            whileInView={{x:0}}
+                            viewport={{once: true}}
+                            transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
+
+                            className="text-3xl md:text-4xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                             News
+                        </motion.h2>
                         <div className="space-y-4">
                             <div className="flex items-start gap-3">
                                 <div className="bg-purple-500/10 p-2 rounded-full mt-1">
@@ -52,9 +60,10 @@ export default function FacultyNewsSection() {
                                 </div>
                                 <div>
                                     <h3 className="font-medium text-white">Academic Publications</h3>
-                                    <p className="text-gray-400">
-                                        Access the latest research papers, journal articles, and academic contributions from our faculty.
-                                    </p>
+                                    <span className="text-gray-400">
+
+                                        <DescriptionFliper className='text-xl' paragraph={' Access the latest research papers, journal articles, and academic contributions from our faculty.'}/>
+                                    </span>
                                 </div>
                             </div>
 
@@ -64,9 +73,9 @@ export default function FacultyNewsSection() {
                                 </div>
                                 <div>
                                     <h3 className="font-medium text-white">Faculty Profiles</h3>
-                                    <p className="text-gray-400">
-                                        Learn about our professors' expertise, research interests, and professional backgrounds.
-                                    </p>
+                                    <span className="text-gray-400">
+                                        <DescriptionFliper className='text-xl' paragraph={'earn about our professors\' expertise, research interests, and professional backgrounds.'}/>
+                                    </span>
                                 </div>
                             </div>
 
@@ -76,10 +85,10 @@ export default function FacultyNewsSection() {
                                 </div>
                                 <div>
                                     <h3 className="font-medium text-white">Upcoming Lectures</h3>
-                                    <p className="text-gray-400">
-                                        Never miss important faculty lectures, workshops, and speaking engagements.
-                                    </p>
-                                </div>
+                                    <span className="text-gray-400">
+                                        <DescriptionFliper className='text-xl' paragraph={' Never miss important faculty lectures, workshops, and speaking engagements.'}/>
+                                    </span>
+                               </div>
                             </div>
                         </div>
                     </div>
@@ -149,7 +158,7 @@ export default function FacultyNewsSection() {
                                     Faculty Updates
                                 </div>
                                 <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                                    Faculty News
+                                    News
                                 </h2>
                                 <div className="space-y-4">
                                     <div className="flex items-start gap-3">
