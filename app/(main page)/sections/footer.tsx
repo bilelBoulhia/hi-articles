@@ -10,12 +10,11 @@ import {
 import Link from "next/link"
 import DescriptionFliper from "@/components/ui/Description-Fliper";
 import {FacebookIcon,Instagram,LinkedInIcon, Tiktok} from "@/components/ui/Icons";
-import {FacebookEmbed} from "react-social-media-embed";
 import InstagramProfile from "@/components/ui/instagram-profile";
 
 
 
-const paragraph : string = 'Join our community and Improve your skills ideas, business, and creative thinking.'
+const paragraph : string = 'follow our community to Improve your skills, ideas, business, and creative thinking.'
 export default function Footer() {
     const containerVariants = {
         hidden: { opacity: 0 },
