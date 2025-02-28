@@ -12,7 +12,7 @@ const DescriptionFliper = ({ className, paragraph }: Props) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.25 }}
-            className={cn(className, "font-medium text-left")}
+            className={cn(className, "font-medium lg:text-left")}
         >
             {paragraph.split(",").map((sentence, index) => (
                 <motion.span

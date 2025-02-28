@@ -56,8 +56,8 @@ const pargraph= 'check out and expansion of unique, interesting, genre of articl
                 <h2 className=" text-2xl [@media(min-width:360px)]:text-4xl sm:text-6xl  py-3  lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500  text-transparent bg-clip-text">
                   Explore our categories
                 </h2>
-                  <div className='py-4'>
-                       <DescriptionFliper paragraph={pargraph} className='hidden [@media(min-width:360px)]:inline dark:text-white mb-8 text-black'/>
+                  <div className='py-4 hidden [@media(min-width:360px)]:inline '>
+                       <DescriptionFliper paragraph={pargraph} className='  dark:text-white mb-8 text-black '/>
                   </div>
 
                 <Button className="group relative  inline-flex items-center justify-center px-8 py-6 text-md text-white transition-all duration-300 ease-in-out bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full overflow-hidden shadow-lg hover:shadow-purple-500/25">
@@ -89,8 +89,7 @@ const pargraph= 'check out and expansion of unique, interesting, genre of articl
                           <div
                               className={`w-8 h-8 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br ${category.gradient} p-[1px] backdrop-blur-xl`}
                           >
-                            <div
-                                className="w-full h-full rounded-lg sm:rounded-xl bg-black/80 flex items-center justify-center">
+                            <div className="w-full h-full rounded-lg sm:rounded-xl bg-black/80 flex items-center justify-center">
                               <category.icon className="w-4 h-4 sm:w-6 sm:h-6 text-purple-400"/>
                             </div>
                           </div>
