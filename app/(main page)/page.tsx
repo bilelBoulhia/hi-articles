@@ -26,7 +26,7 @@ export default function Home() {
             <section className='snap-start w-full min-h-screen'>
                 <CategorySection/>
             </section>
-            <section className='snap-start w-full min-h-screen'>
+            <section className='snap-start w-full '>
                 <FacultyNewsSection/>
             </section>
             <section className='snap-start  w-full min-h-screen'>

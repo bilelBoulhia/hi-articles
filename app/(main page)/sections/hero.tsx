@@ -94,7 +94,7 @@ export default function Hero() {
             <div className="flex lg:hidden flex-col px-4 ">
                 <div className="overflow-y-scroll snap-y snap-mandatory h-screen">
                     <section className="snap-start">
-                        <div className="relative flex-col gap-[1rem] text-5xl [@media(min-width:450px)]:text-7xl sm:text-8xl min-h-screen justify-center items-start flex w-full xl:w-[60%]">
+                        <div className="relative flex-col gap-[1rem] text-4xl  [@media(min-width:360px)]:text-5xl [@media(min-width:450px)]:text-7xl sm:text-8xl min-h-screen justify-center items-start flex w-full xl:w-[60%]">
                             <motion.span initial={{x: "-150%"}} animate={{x: "0%"}}
                                          transition={{duration: 0.75, delay: 1}}
                                          className="relative inline-block">
@@ -110,7 +110,7 @@ export default function Hero() {
                             <span className="text-center" style={{fontWeight: 1000}}>
                                 <ThickWordTransform initialWord="WELCOME TO " transformedWord="E-JOURNAL"/>
                             </span>
-                            <DescriptionFliper className='text-xl' paragraph={paragraph}/>
+                            <DescriptionFliper className='text-sm [@media(min-width:360px)]:text-xl' paragraph={paragraph}/>
                         </div>
                     </section>
                     <section className="snap-start">

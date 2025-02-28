@@ -33,7 +33,7 @@ export default function CoolNewsletter() {
 1
     return (
         <div className='h-screen flex items-center w-full relative justify-center'>
-        <div className="relative overflow-hidden py-16  sm:py-24 w-full">
+        <div className="relative overflow-hidden py-8  [@media(min-width:360px)]:py-16  sm:py-24 w-full">
             <motion.div
                 initial="hidden"
                 viewport={{once: true}}
@@ -53,11 +53,11 @@ export default function CoolNewsletter() {
 
                             */}
                             <h2
-                              className=" text-2xl md:text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                              className="text-xl [@media(min-width:360px)]:text-2xl md:text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                                 Get notifactions about new articles
                             </h2>
                             <div className="mt-4 max-w-3xl  text-purple-100">
-                               <DescriptionFliper className=' md:text-xl' paragraph={paragraph}/>
+                               <DescriptionFliper className=' text-xs [@media(min-width:360px)]:text-xl' paragraph={paragraph}/>
                             </div>
                         </div>
                         <div className="mt-12 sm:w-full sm:max-w-md lg:mt-0 lg:ml-8 lg:flex-1">
