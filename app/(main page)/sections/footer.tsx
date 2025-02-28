@@ -54,15 +54,17 @@ export default function Footer() {
 
                 <motion.div variants={itemVariants} className="space-y-12">
                     <div className="space-y-4">
-                        <motion.h2
-                            initial={{x: '-80%'}}
-                            whileInView={{x: 0}}
-                            viewport={{once: true}}
-                            transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
+                        {/*
+                        initial={{x: '-80%'}}
+                        whileInView={{x: 0}}
+                        viewport={{once: true}}
+                        transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
 
+                        */}
+                        <h2
                             className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
                             Let's Connect
-                        </motion.h2>
+                        </h2>
                         <div className="dark:text-white max-w-md">
                             <DescriptionFliper className='text-xl' paragraph={paragraph}/>
                         </div>

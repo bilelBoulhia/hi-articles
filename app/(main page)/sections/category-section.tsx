@@ -46,15 +46,18 @@ const pargraph= 'check out and expansion of unique, interesting, genre of articl
                   transition={{duration: 0.6}}
                   className="relative w-full  text-center lg:text-left z-10"
               >
-                <motion.h2
+                  {/*
                     initial={{x:'-104%'}}
                     whileInView={{x:0}}
                     viewport={{once: true}}
                     transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
 
+                  */}
+                <h2
+
                     className="text-4xl sm:text-6xl  py-3  lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500  text-transparent bg-clip-text">
                   Explore our categories
-                </motion.h2>
+                </h2>
                <DescriptionFliper paragraph={pargraph} className='dark:text-xl mb-8 text-lg'/>
                 <Button className="group relative  inline-flex items-center justify-center px-8 py-6 text-md text-white transition-all duration-300 ease-in-out bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full overflow-hidden shadow-lg hover:shadow-purple-500/25">
                             <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></span>

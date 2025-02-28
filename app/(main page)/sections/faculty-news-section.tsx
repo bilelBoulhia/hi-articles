@@ -44,15 +44,18 @@ export default function FacultyNewsSection() {
                     <div className="space-y-6">
                         <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm font-mono">Faculty Updates</div>
 
-                        <motion.h2
-                            initial={{x:'-100%'}}
+
+                        {/*
+                          initial={{x:'-100%'}}
                             whileInView={{x:0}}
                             viewport={{once: true}}
                             transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
+*/}
+                        <h2
 
                             className="text-3xl md:text-4xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                              News
-                        </motion.h2>
+                        </h2>
                         <div className="space-y-4">
                             <div className="flex items-start gap-3">
                                 <div className="bg-purple-500/10 p-2 rounded-full mt-1">
