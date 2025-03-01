@@ -64,7 +64,7 @@ export default function SearchModal() {
 
                 <Button className='hover:bg-transparent' variant="ghost">
                     <div className="md:hidden rounded-full  h-10 w-11 flex justify-center items-center">
-                        <MagnifyingGlassIcon className="w-5 dark:text-whites h-5"/>
+                        <MagnifyingGlassIcon className=" dark:text-whites size-5"/>
                     </div>
                     <div className="hidden  md:block relative m-5 z-10  ">
                         <div

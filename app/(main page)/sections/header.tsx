@@ -15,10 +15,11 @@ export default function Header() {
                             our website
                         </Button>
                     </Link>
-
+                    <Link href='/articles'>
                     <Button className="text-sm bg-primary text-primary-foreground hover:bg-primary/90 dark:bg-primary dark:text-primary-foreground dark:hover:bg-primary/90">
                         Articles
                     </Button>
+                    </Link>
                 </div>
             </nav>
         </header>

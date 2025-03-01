@@ -70,11 +70,9 @@ const pargraph= 'check out and expansion of unique, interesting, genre of articl
                 </Button>
               </motion.div>
             </div>
-
-
             <div className="lg:w-[50%]  flex justify-center items-center">
               <div
-                  className="max-w-6xl mx-auto flex flex-col sm:flex-row lg:flex-wrap xl:grid xl:grid-cols-2 justify-around gap-2 sm:gap-3   ">
+                  className="max-w-6xl mx-auto flex flex-col sm:flex-row lg:flex-wrap xl:grid xl:grid-cols-2 justify-around gap-2 sm:gap-3">
                 {categories.map((category, index) => (
                     <motion.div
                         key={category.title}
