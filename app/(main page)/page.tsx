@@ -14,12 +14,6 @@ export default function Home() {
         <div className="flex flex-col w-full h-screen overflow-y-scroll snap-y snap-mandatory ">
             <Header/>
             <AbstractBackground/>
-            <style>
-                {`
-                .overflow-y-scroll::-webkit-scrollbar {
-                display: none;
-                }`}
-            </style>
             <section className='snap-start w-full min-h-screen'>
                 <Hero/>
             </section>
