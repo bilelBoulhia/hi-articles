@@ -113,13 +113,13 @@ export default async function Home(){
             <div className='relative w-[20%]  flex-col lg:flex hidden h-screen  border-l-[1px] text-center items-start justify-start border-neutral-800'>
 
                 <div className='w-full mt-3 '>
-                    <h3 className="text-lg text-start font-semibold p-4">Latest News</h3>
+                    <h3 className="text-lg text-start bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500  text-transparent bg-clip-text font-semibold p-4">Latest News</h3>
                     <MinifiedNewsCardList/>
                 </div>
 
 
                 <div className='text-start mt-10'>
-                <h3 className="text-lg font-semibold m-5 mb-4">our picks</h3>
+                <h3 className="text-lg font-semibold m-5 bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500  text-transparent bg-clip-text mb-4">our picks</h3>
                         {categories[0].data.map((article, index) => (
                             <MiniArticleCard
                                 key={index}
