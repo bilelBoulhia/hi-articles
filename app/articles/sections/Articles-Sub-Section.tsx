@@ -158,15 +158,16 @@ export default function ArticlesSubSection() {
     }
 
     return (
-        <Tabs className="h-full w-full" defaultValue="general">
+        <Tabs className="h-full w-full flex flex-col" defaultValue="general">
             <style>
                 {`
+              
                 .overflow-y-scroll::-webkit-scrollbar {
                 display: none;
                 }`}
             </style>
 
-            <div className="relative">
+            <div className="sticky bg-transparent top-0 z-10">
                 {showLeftArrow && (
                     <button
                         onClick={() => scroll("left")}
@@ -177,10 +178,10 @@ export default function ArticlesSubSection() {
                     </button>
                 )}
 
-                <div className="relative  overflow-hidden ">
+                <div className="relative  overflow-hidden">
                     <TabsList
                         ref={tabsListRef}
-                        className="bg-transparent overflow-y-scroll h-full  w-full justify-start md:justify-center rounded-none py-4 px-1  sticky top-0 z-10 overflow-x-auto scrollbar-hide flex gap-2"
+                        className="bg-transparent border-b-neutral-800 border-b-[1px] overflow-y-scroll h-full  w-full justify-start md:justify-center rounded-none py-4  px-1 z-10 overflow-x-auto scrollbar-hide flex gap-2"
                         onScroll={checkForArrows}
                     >
 
@@ -189,7 +190,7 @@ export default function ArticlesSubSection() {
                                 key={i}
                                 onClick={() => setCategoryData(category.category)}
                                 value={category.category}
-                                className="px-4 py-2 text-sm font-medium capitalize rounded-full border border-transparent data-[state=active]:border-primary/20 data-[state=active]:bg-neutral-900 data-[state=active]:text-primary transition-all duration-200 hover:bg-neutral-900"
+                                className="px-4  py-2 text-sm font-medium capitalize rounded-full border border-transparent data-[state=active]:border-primary/20 data-[state=active]:bg-neutral-900 data-[state=active]:text-primary transition-all duration-200 hover:bg-neutral-900"
                             >
                                 {category.category}
                             </TabsTrigger>
@@ -208,18 +209,20 @@ export default function ArticlesSubSection() {
                 )}
             </div>
 
-            {categories.map((category, i) => (
-                <TabsContent key={i} value={category.category}>
-                    {category.data.length > 0 ? (
-                        category.data.map((article, index) => (
-                            <ArticleCard key={index} {...article} />
-                        ))
-                    ) : (
-                        <p className="text-center text-gray-500">No articles available</p>
-                    )}
-                </TabsContent>
-            ))}
+            <div className="flex-1 bg-transparent overflow-y-scroll">
+                {categories.map((category, i) => (
+                    <TabsContent key={i}  className="mt-0" value={category.category}>
+                        {category.data.length > 0 ? (
+                            category.data.map((article, index) => (
+                                <ArticleCard key={index} {...article} />
+                            ))
+                        ) : (
+                            <p className="text-center text-gray-500">No articles available</p>
+                        )}
+                    </TabsContent>
+                ))}
+            </div>
         </Tabs>
-    )
+)
 }
 

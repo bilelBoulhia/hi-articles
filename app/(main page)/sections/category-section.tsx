@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "motion/react"
-import {Atom, ShoppingCart, LineChart, ArrowRight, Briefcase, Newspaper,} from "lucide-react"
+import { ShoppingCart, LineChart, ArrowRight, Briefcase, Newspaper,} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import DescriptionFliper from "@/components/ui/Description-Fliper";
 

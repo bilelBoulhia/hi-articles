@@ -1,9 +1,6 @@
 import { Space_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-import Footer from "@/app/articles/sections/Footer";
-import Header from "@/app/articles/sections/Header";
-import AbstractBackground from "@/components/ui/abstract-background";
 import { Analytics } from "@vercel/analytics/react"
 
 const defaultUrl = process.env.VERCEL_URL
