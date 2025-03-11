@@ -1,9 +1,10 @@
 "use client"
 
 import { motion } from "motion/react"
-import { ArrowRight, Calendar, Clock } from 'lucide-react'
+import {ArrowRight, Calendar, Clock, Share2} from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Carousel from "@/components/ui/CarouselV2";
+
 
 export default function ArticlePage() {
     const article = {
@@ -110,21 +111,17 @@ export default function ArticlePage() {
 
 
                     <div className="flex flex-wrap gap-4 mt-8">
-                        <Button
-                            variant="outline"
-                            className="border-purple-500/30 hover:bg-purple-500/10 text-purple-400"
-                        >
-                            Share Article
+                        <Button variant="outline" size="icon" className="border-gray-600">
+                            <Share2 className="h-4 w-4" />
                         </Button>
                     </div>
                 </motion.div>
             </div>
 
-            {/* Fixed the carousel container to prevent overflow */}
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.6, delay: 0.3}}
                 className="w-full mx-auto py-16 overflow-hidden"
             >
                 <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -133,18 +130,19 @@ export default function ArticlePage() {
                     </h2>
                 </div>
 
-                {/* Carousel with adjusted slide sizing for responsiveness */}
-                <div className="  mx-auto">
+
+                <div className="mx-auto">
                     <Carousel>
                         {relatedArticles.map((article, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                initial={{opacity: 0, y: 20}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{duration: 0.5, delay: index * 0.1}}
                                 className="flex-shrink-0 group cursor-pointer h-full"
                             >
-                                <div className="bg-black/40  max-h-[350px] min-h-[350px] backdrop-blur-sm rounded-xl overflow-hidden border border-white/5 hover:border-purple-400/50 transition-all duration-500 h-full flex flex-col">
+                                <div
+                                    className="bg-black/40  max-h-[350px] min-h-[350px] backdrop-blur-sm rounded-xl overflow-hidden border border-white/5 hover:border-purple-400/50 transition-all duration-500 h-full flex flex-col">
 
                                     <div className="relative  w-full overflow-hidden">
                                         <img
@@ -152,7 +150,8 @@ export default function ArticlePage() {
                                             alt={article.title}
                                             className="object-cover  w-full transition-transform duration-500 group-hover:scale-105"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                                        <div
+                                            className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
 
                                         {/* Category Badge */}
                                         <div
@@ -162,7 +161,7 @@ export default function ArticlePage() {
                                         </div>
                                     </div>
 
-                                    {/* Article Content */}
+
                                     <div className="p-4 flex flex-col flex-grow">
                                         <h3 className="font-medium text-white mb-2 group-hover:text-purple-400 transition-colors duration-300 line-clamp-2">
                                             {article.title}
@@ -170,7 +169,8 @@ export default function ArticlePage() {
 
                                         <div className="mt-auto pt-4 flex justify-between items-center">
                                             <span className="text-xs text-gray-400">5 min read</span>
-                                            <ArrowRight className="h-4 w-4 text-purple-400 transform transition-transform duration-300 group-hover:translate-x-1" />
+                                            <ArrowRight
+                                                className="h-4 w-4 text-purple-400 transform transition-transform duration-300 group-hover:translate-x-1"/>
                                         </div>
                                     </div>
                                 </div>
@@ -178,8 +178,6 @@ export default function ArticlePage() {
                         ))}
                     </Carousel>
                 </div>
-
-
             </motion.div>
         </div>
     )

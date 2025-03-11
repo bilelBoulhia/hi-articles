@@ -8,6 +8,7 @@ import {Dialog, DialogContent, DialogTitle, DialogTrigger} from "@/components/ui
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Badge } from "@/components/ui/badge"
 import {motion} from "motion/react";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/Tabs";
 
 // Mock search results
 const searchResults = [
@@ -131,26 +132,59 @@ export default function SearchModal() {
                         </div>
                     </motion.div>
                 </div>
-                <ScrollArea className="max-h-[60vh] p-4">
-                    {filteredResults.length > 0 ? (
-                        filteredResults.map((result) => (
-                            <div
-                                key={result.id}
-                                className="mb-4 p-4 bg-neutral-100 dark:bg-neutral-800 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                            >
-                                <h3 className="text-lg font-semibold mb-2">{result.title}</h3>
-                                <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                                    {result.content.length > 100 ? `${result.content.substring(0, 100)}...` : result.content}
-                                </p>
-                                <Badge variant="secondary" className="text-xs">
-                                    {result.tag}
-                                </Badge>
-                            </div>
-                        ))
-                    ) : (
-                        <p className="text-center text-gray-500 dark:text-gray-400">No results found</p>
-                    )}
-                </ScrollArea>
+                <Tabs defaultValue="articles" >
+                    <TabsList className='w-full rounded-none bg-transparent border-b-[1px] border-neutral-800'>
+                        <TabsTrigger value="articles">articles</TabsTrigger>
+                        <TabsTrigger value="news">news</TabsTrigger>
+                    </TabsList>
+                    <TabsContent value="news">
+                        <ScrollArea className="max-h-[60vh] p-4">
+                            {filteredResults.length > 0 ? (
+                                filteredResults.map((result) => (
+                                    <div
+                                        key={result.id}
+                                        className="mb-4 p-4 bg-neutral-100 dark:bg-neutral-800 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                                    >
+                                        <h3 className="text-lg font-semibold mb-2">{result.title}</h3>
+                                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                            {result.content.length > 100 ? `${result.content.substring(0, 100)}...` : result.content}
+                                        </p>
+                                        <Badge variant="secondary" className="text-xs">
+                                            {result.tag}
+                                        </Badge>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="text-center text-gray-500 dark:text-gray-400">No results found</p>
+                            )}
+                        </ScrollArea>
+                    </TabsContent>
+                    <TabsContent value="articles">
+                        <ScrollArea className="max-h-[60vh] p-4">
+                            {filteredResults.length > 0 ? (
+                                filteredResults.map((result) => (
+                                    <div
+                                        key={result.id}
+                                        className="mb-4 p-4 bg-neutral-100 dark:bg-neutral-800 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                                    >
+                                        <h3 className="text-lg font-semibold mb-2">{result.title}</h3>
+                                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                            {result.content.length > 100 ? `${result.content.substring(0, 100)}...` : result.content}
+                                        </p>
+                                        <Badge variant="secondary" className="text-xs">
+                                            {result.tag}
+                                        </Badge>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="text-center text-gray-500 dark:text-gray-400">No results found</p>
+                            )}
+                        </ScrollArea>
+                    </TabsContent>
+
+                </Tabs>
+
+
             </DialogContent>
         </Dialog>
     )

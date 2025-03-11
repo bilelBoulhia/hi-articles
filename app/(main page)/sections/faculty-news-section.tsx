@@ -49,14 +49,6 @@ export default function FacultyNewsSection() {
                         <div className="inline-block rounded-lg bg-purple-500/10 px-3 py-1 text-sm font-mono">Faculty
                             Updates
                         </div>
-
-
-                        {/*
-                          initial={{x:'-100%'}}
-                            whileInView={{x:0}}
-                            viewport={{once: true}}
-                            transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
-*/}
                         <h2
                             className="text-3xl md:text-4xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                             News
@@ -101,10 +93,7 @@ export default function FacultyNewsSection() {
                                     <span className="text-gray-400">
 
                                         <p className='font-medium lg:text-left'>
-
-          Never miss important faculty lectures, workshops, and speaking engagements.
-
-
+                                            Never miss important faculty lectures, workshops, and speaking engagements.
                                         </p>
 
                                     </span>
@@ -189,8 +178,7 @@ export default function FacultyNewsSection() {
                                         <div>
                                             <h3 className="font-medium text-white">Conferences</h3>
                                             <span className="text-gray-400 text-sm">
-                                        <DescriptionFliper
-                                            paragraph={' Access the latest research papers, journal articles, and academic contributions from our faculty.'}/>
+                                                <p className='font-medium lg:text-left'>Access the latest research papers, journal articles, and academic contributions from our faculty.</p>
                                             </span>
                                         </div>
                                     </div>
@@ -201,7 +189,9 @@ export default function FacultyNewsSection() {
                                         <div>
                                             <h3 className="font-medium text-white">Faculty Profiles</h3>
                                             <span className="text-gray-400">
-                                                <DescriptionFliper paragraph={'earn about our professors expertise, research interests, and professional backgrounds.'}/>
+                                                 <p className='font-medium lg:text-left'>
+                                                     earn about our professors' expertise, research interests, and professional backgrounds.
+                                                 </p>
                                             </span>
                                         </div>
                                     </div>
@@ -212,7 +202,9 @@ export default function FacultyNewsSection() {
                                         <div>
                                             <h3 className="font-medium text-white">Events</h3>
                                             <span className="text-gray-400">
-                                            <DescriptionFliper paragraph={' Never miss important faculty lectures, workshops, and speaking engagements.'}/>
+                                                <p className='font-medium lg:text-left'>
+                                                    Never miss important faculty lectures, workshops, and speaking engagements.
+                                                </p>
                                             </span>
                                         </div>
                                     </div>
