@@ -1,5 +1,4 @@
 'use server'
-
 import ArticlesSubSection from "@/app/articles/sections/Articles-Sub-Section";
 import {MiniArticleCard} from "@/components/minified-article-card";
 import MinifiedNewsCardList from "@/components/minified-news-section";

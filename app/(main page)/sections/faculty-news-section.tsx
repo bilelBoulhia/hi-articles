@@ -70,7 +70,8 @@ export default function FacultyNewsSection() {
                                     <h3 className="font-medium text-white">Academic Publications</h3>
                                     <span className="text-gray-400">
 
-                                        <DescriptionFliper paragraph={' Access the latest research papers, journal articles, and academic contributions from our faculty.'}/>
+                                        <p className='font-medium lg:text-left'>Access the latest research papers, journal articles, and academic contributions from our faculty.</p>
+
                                     </span>
                                 </div>
                             </div>
@@ -82,7 +83,11 @@ export default function FacultyNewsSection() {
                                 <div>
                                     <h3 className="font-medium text-white">Faculty Profiles</h3>
                                     <span className="text-gray-400">
-                                        <DescriptionFliper paragraph={'earn about our professors\' expertise, research interests, and professional backgrounds.'}/>
+                                        <p className='font-medium lg:text-left'>
+                                            earn about our professors' expertise, research interests, and professional backgrounds.
+
+                                        </p>
+
                                     </span>
                                 </div>
                             </div>
@@ -94,7 +99,14 @@ export default function FacultyNewsSection() {
                                 <div>
                                     <h3 className="font-medium text-white">Upcoming Lectures</h3>
                                     <span className="text-gray-400">
-                                        <DescriptionFliper paragraph={' Never miss important faculty lectures, workshops, and speaking engagements.'}/>
+
+                                        <p className='font-medium lg:text-left'>
+
+          Never miss important faculty lectures, workshops, and speaking engagements.
+
+
+                                        </p>
+
                                     </span>
                                 </div>
                             </div>

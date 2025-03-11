@@ -36,14 +36,9 @@ export default function Footer() {
 
     return (
         <div className="relative min-h-screen w-full flex flex-col lg:flex-row p-4 md:p-6 items-center justify-center overflow-hidden">
-            <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="relative w-full lg:w-1/2 py-4 space-y-8"
+            <div className="relative w-full lg:w-1/2 py-4 space-y-8"
             >
-                <motion.div variants={itemVariants} className="space-y-6 md:space-y-10">
+                <div  className="space-y-6 md:space-y-10">
                     <div className="space-y-4">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
                             Let's Connect
@@ -54,7 +49,7 @@ export default function Footer() {
                     </div>
 
                     <div className="space-y-6 text-sm sm:text-base md:text-lg">
-                        <motion.div variants={itemVariants} className="flex items-start space-x-4">
+                        <div  className="flex items-start space-x-4">
                             <div className="bg-purple-500/10 p-2.5 rounded-full mt-1">
                                 <Mail className="h-5 w-5 text-purple-400" />
                             </div>
@@ -62,9 +57,9 @@ export default function Footer() {
                                 <p className="dark:text-gray-400 text-gray-600">Email us at</p>
                                 <p className="dark:text-white font-medium">hoi.univalger3@gmail.com</p>
                             </div>
-                        </motion.div>
+                        </div>
 
-                        <motion.div variants={itemVariants} className="flex items-start space-x-4">
+                        <div className="flex items-start space-x-4">
                             <div className="bg-purple-500/10 p-2.5 rounded-full mt-1">
                                 <Phone className="h-5 w-5 text-purple-400" />
                             </div>
@@ -73,9 +68,9 @@ export default function Footer() {
                                 <p className="dark:text-white font-medium">+213 796 66 43 83</p>
                                 <p className="dark:text-white font-medium">+213 552 55 33 24</p>
                             </div>
-                        </motion.div>
+                        </div>
 
-                        <motion.div variants={itemVariants} className="flex items-start space-x-4">
+                        <div  className="flex items-start space-x-4">
                             <div className="bg-purple-500/10 p-2.5 rounded-full mt-1">
                                 <MapPin className="h-5 w-5 text-purple-400" />
                             </div>
@@ -88,11 +83,11 @@ export default function Footer() {
                                     University of Algiers 3
                                 </Link>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
-                </motion.div>
+                </div>
 
-                <motion.div variants={itemVariants} className="space-y-4 pt-4">
+                <div  className="space-y-4 pt-4">
                     <div className="space-y-3">
                         <h3 className="text-xl sm:text-2xl font-bold font-sans dark:text-white">Follow Us</h3>
                         <div className="flex space-x-4 sm:space-x-6">
@@ -113,8 +108,8 @@ export default function Footer() {
                             </SocialLink>
                         </div>
                     </div>
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
 
             <div className="mt-8 p-5 hidden lg:block lg:w-1/2">
                 <Link
@@ -125,8 +120,8 @@ export default function Footer() {
                 </Link>
             </div>
 
-            <motion.div
-                variants={itemVariants}
+            <div
+
                 className="absolute bottom-4 left-0 right-0 text-center text-xs sm:text-sm text-gray-400"
             >
                 <p>
@@ -136,7 +131,7 @@ export default function Footer() {
                     </Link>{" "}
                     {"<3"}
                 </p>
-            </motion.div>
+            </div>
         </div>
     )
 }

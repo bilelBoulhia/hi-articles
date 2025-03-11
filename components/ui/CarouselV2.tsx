@@ -5,42 +5,42 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 
+
 const Carousel = ({ children, className }: { children: React.ReactNode; className?: string }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isLargeScreen, setIsLargeScreen] = useState(false)
     const [windowSizeKey, setWindowSizeKey] = useState(0);
     const totalSlides = React.Children.count(children)
-    const cardsToShow = 3 // Number of cards to show on larger screens
+    const cardsToShow = 3
 
     useEffect(() => {
         const checkScreenSize = () => {
             setIsLargeScreen(window.innerWidth >= 860)
-            setWindowSizeKey(prevKey => prevKey + 1); // sm breakpoint in Tailwind
-        }
-
+            setWindowSizeKey(prevKey => prevKey + 1);
+        };
         checkScreenSize()
+
         window.addEventListener("resize", checkScreenSize)
         return () => window.removeEventListener("resize", checkScreenSize)
     }, [])
-
     const nextSlide = () => {
         if (isLargeScreen) {
-            // For larger screens with multiple cards visible
+
             const maxIndex = totalSlides - cardsToShow
             setCurrentIndex((prevIndex) => (prevIndex >= maxIndex ? 0 : prevIndex + 1))
         } else {
-            // Original logic for small screens
+
             setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides)
         }
     }
 
     const prevSlide = () => {
         if (isLargeScreen) {
-            // For larger screens with multiple cards visible
+
             const maxIndex = totalSlides - cardsToShow
             setCurrentIndex((prevIndex) => (prevIndex <= 0 ? maxIndex : prevIndex - 1))
         } else {
-            // Original logic for small screens
+
             setCurrentIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides)
         }
     }
@@ -57,7 +57,7 @@ const Carousel = ({ children, className }: { children: React.ReactNode; classNam
                     ))}
                 </div>
 
-                <div  >
+                <div>
                     <Button
                         onClick={prevSlide}
                         className="absolute left-0  top-1/2 transform -translate-y-1/2 rounded-full bg-black/60 border-white/10 text-white hover:bg-purple-900/50 hover:text-white h-9 w-9 sm:h-10 sm:w-10"
@@ -75,7 +75,6 @@ const Carousel = ({ children, className }: { children: React.ReactNode; classNam
         )
     }
 
-    // Large screen carousel (multiple cards visible)
     return (
         <div className={`relative ${className}`}>
             <div className="overflow-hidden">

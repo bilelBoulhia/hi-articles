@@ -12,7 +12,7 @@ import { motion } from "motion/react"
 import {shadowVariants} from "@/utils/types";
 import DescriptionFliper from "@/components/ui/Description-Fliper";
 
-const paragraph :string= 'subscribe to our newsletter, so you can Get notification , about the latest articles'
+
 export default function CoolNewsletter() {
     const [showToast, setShowToast] = useState(false)
     const {register,handleSubmit
@@ -45,19 +45,16 @@ export default function CoolNewsletter() {
                     <div className="px-6  py-12 sm:px-12 sm:py-16 lg:flex lg:items-center lg:p-20">
                         <div className="lg:w-0 lg:flex-1">
 
-                            {/*
-                                initial={{x:'-104%'}}
-                                whileInView={{x:0}}
-                                viewport={{once: true}}
-                                transition={{duration: 0.5, delay: 0.4, ease: "easeInOut"}}
-
-                            */}
                             <h2
                               className="text-xl [@media(min-width:360px)]:text-2xl md:text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                                 Get notifactions about new articles
                             </h2>
                             <div className="mt-4 max-w-3xl  text-purple-100">
-                               <DescriptionFliper className=' text-xs [@media(min-width:360px)]:text-xl' paragraph={paragraph}/>
+                                <p className='font-medium lg:text-left'>
+
+                                    subscribe to our newsletter, so you can Get notification , about the latest articles
+                                </p>
+
                             </div>
                         </div>
                         <div className="mt-12 sm:w-full sm:max-w-md lg:mt-0 lg:ml-8 lg:flex-1">
