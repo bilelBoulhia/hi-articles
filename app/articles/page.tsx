@@ -2,6 +2,7 @@
 import ArticlesSubSection from "@/app/articles/sections/Articles-Sub-Section";
 import {MiniArticleCard} from "@/components/minified-article-card";
 import MinifiedNewsCardList from "@/components/minified-news-section";
+import SubFooter from "@/app/articles/sections/SubFooter";
 
 const categories = [
     {
@@ -129,8 +130,9 @@ export default async function Home(){
                             />
                         ))}
                 </div>
-
+                <SubFooter></SubFooter>
             </div>
+
         </div>
 
     )

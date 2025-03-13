@@ -6,7 +6,9 @@ export default function RootLayout({children}:Readonly<{children:React.ReactNode
         <div className='font-serif flex w-full flex-col  overflow-hidden items-center justify-center'>
             <Header/>
             {children}
-            <Footer/>
+         <div className='w-full lg:hidden h-full relative'>
+             <Footer/>
+         </div>
         </div>
     )
 }

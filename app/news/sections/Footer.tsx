@@ -4,6 +4,7 @@ import {ThemeSwitcher} from "@/components/theme-switcher";
 
 export default function Footer() {
     return (
+
         <footer  id='ContactUs' className="  w-full  border-gray-800 mt-4  overflow-hidden border-t-[1px]">
             <div className="mx-auto w-full px-2 p-1 py-6 lg:py-8">
                 <div className="md:flex md:justify-between ">
